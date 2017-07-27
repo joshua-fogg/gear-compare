@@ -9,12 +9,24 @@ Gear compare: items and traits to compare, basic features, technical features, h
 
 Mask features:
  - Lense: mono, dual, 
- - Lense colour / polarisation:
  - Lens type: tempered, composit, strengthened
- - Prescription lenses available: true/false
- - strap color: black, white, custom
- - Lense
- - Mask Profile: low, mid, high
- - Skirting: black, clear, other, 
- - accessories: purge-valve
+ --Prescription lenses available: true/false
+ --Strap Type: neoprene, rubber, plastic, silicone
+ --Strap color: black, white, custom
+ --Mask Profile: low, mid, high
+ - Snorkel Integrated: True, False
+ --Skirting product: black, clear, other, silicone vs plastic or rubber
+ --Skirting color: black, clear, white...
+ - Accessories: purge-valve, coloured lenses, mounted display, snorkel integration
  - 
+
+ Fins:
+ - Blade Type: solid, split
+ - Fin to foot ratio:
+ - Heel Style: open heel, full-foot, hand-fin
+ - Strap-types: spring, buckle, quick-adjust, boot  
+ - features: vents, ribs, rials, channels, split.
+
+ Snorkel:
+ - Mothpiece: max-comfort, standard, comfobite, mouth-mouldable
+ - Mouthpiece-type: silicone, rubber, 
