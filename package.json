@@ -2,7 +2,6 @@
     "name": "gear-compare",
     "version": "1.0.0",
     "description": "a website to help beginner divers choose gear that's best for them",
-    "main": "server.js",
     "main": "index.js",
     "scripts": {
         "start": "nodemon server & webpack --watch",
