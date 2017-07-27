@@ -1,6 +1,20 @@
 Gear Compare:
 
 Landing Page: Top navBar, intro animation / background-pic, intro to purpose for Gear Compare, link to compare.
-Gear Class Page: navBar top, use animation / nice background-pic , intro-box: select which hear you would like to compare, 
-Gear Loadout:
+Gear Class Page: navBar top, use animation / nice background-pic , intro-box: select which hear you would like to compare, floating div boxes for class, 
+Gear compare: items and traits to compare, basic features, technical features, hover box showing each traits usefullness
 
+
+/*Gear class-types: info page for
+
+Mask features:
+ - Lense: mono, dual, 
+ - Lense colour / polarisation:
+ - Lens type: tempered, composit, strengthened
+ - Prescription lenses available: true/false
+ - strap color: black, white, custom
+ - Lense
+ - Mask Profile: low, mid, high
+ - Skirting: black, clear, other, 
+ - accessories: purge-valve
+ - 

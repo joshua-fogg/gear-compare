@@ -1,0 +1,6 @@
+scuba = {
+    masks: {
+
+    },
+    fins: {}
+}
