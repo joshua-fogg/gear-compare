@@ -2,20 +2,25 @@ import React from 'react'
 import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 import { render, ReactDOM } from 'react-dom'
 
+import Header from './components/Header'
 import Home from './Home'
+
+
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      //states to access
+      filler: 0
     }
   }
+  //state call functions go here
 
   render() {
     return (
       <Router>
-        <div id='page'>
+        <div id='container'>
+          <Header />
           <Route exact path='/' component={Home} />
       </div>
       </Router>
@@ -23,11 +28,6 @@ class App extends React.Component {
   }
 }
 
-var data = {name: 'mix' }
 
-
-var placeToMount = document.getElementById('root')
-
-ReactDOM.render(view, placeToMount)
 
 export default App

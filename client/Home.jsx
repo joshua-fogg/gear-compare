@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MainPage = () => {
+const Home = () => {
 
-  return (
-    <div>
-      Hello!
+    return (
+        <div className='home'>
+            <div id='home-top'>
+                <img id='banner-img' src='./img/banner-gill.jpg' alt='Banner Image' />
+            </div>
+            Hello!
     </div >
-  )
+    )
 }
-export default MainPage
-  
+export default Home
