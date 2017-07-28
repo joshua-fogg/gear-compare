@@ -1,36 +1,38 @@
 {
-    "name": "gear-compare",
-    "version": "0.1.0",
-    "description": "a website to help beginner divers choose gear that's best for them",
-    "type": "git",
-    "url": "https://github.com/joshua-fogg/gear-compare.git",
-    "main": "index.js",
-    "scripts": {
-        "start": "nodemon server & webpack --watch",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "babel": {
-        "presets": [
-            "es2015",
-            "react"
-        ]
-    },
-    "keywords": [],
-    "author": "EDA",
-    "license": "ISC",
-    "dependencies": {
-        "knex": "^0.13.0",
-        "express": "^4.14.0"
-    },
-    "devDependencies": {
-        "babel-core": "^6.21.0",
-        "babel-loader": "^6.2.10",
-        "babel-preset-es2015": "^6.22.0",
-        "babel-preset-react": "^6.23.0",
-        "jsx-loader": "^0.13.2",
-        "nodemon": "^1.11.0",
-        "react": "^15.4.2",
-        "react-dom": "^15.4.2",
-        "webpack": "^2.5.1"
-    }
+  "name": "gear-compare",
+  "version": "0.1.0",
+  "description": "a website to help beginner divers choose gear that's best for them",
+  "type": "git",
+  "url": "https://github.com/joshua-fogg/gear-compare.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server & webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "keywords": [],
+  "author": "EDA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "knex": "^0.13.0",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "jsx-loader": "^0.13.2",
+    "nodemon": "^1.11.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.5.1"
+  }
 }

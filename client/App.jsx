@@ -1,20 +1,14 @@
 import React from 'react'
 import { Route, Switch, HashRouter as Router } from 'react-router-dom'
-import { render } from 'react-dom'
-import questions from '../../public/data/questions'
-import people from '../../public/data/people'
+import { render, ReactDOM } from 'react-dom'
 
-import Home from './FinalPage'
-// import MainPage from './MainPage'
-// import Question from './Question'
-// import StartPage from './StartPage'
-// import TextQuestions from './TextQuestions'
+import Home from './Home'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      //shit to access
+      //states to access
     }
   }
 
@@ -30,7 +24,7 @@ class App extends React.Component {
 }
 
 var data = {name: 'mix' }
-var view = helloTemplate(data)
+
 
 var placeToMount = document.getElementById('root')
 
