@@ -11306,6 +11306,10 @@ var _reactRouterDom = __webpack_require__(57);
 
 var _reactDom = __webpack_require__(61);
 
+var _db = __webpack_require__(227);
+
+var _db2 = _interopRequireDefault(_db);
+
 var _Header = __webpack_require__(99);
 
 var _Header2 = _interopRequireDefault(_Header);
@@ -11331,7 +11335,7 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
-      filler: 0
+      fillerState: 0
     };
     return _this;
   }
@@ -11387,7 +11391,13 @@ var Home = function Home() {
             { id: 'home-top' },
             _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
         ),
-        'Hello!'
+        'Hello Yall Home PAge',
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+            _reactRouterDom.Link,
+            null,
+            'Check Out Classes '
+        )
     );
 };
 exports.default = Home;
@@ -25862,6 +25872,26 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    getUser: getUser,
+    getUsers: getUsers
+};
+
+function getUsers(connection) {
+    return connection('users').select();
+}
+
+function getUser(id, connection) {
+    return connection('users').where('id', id);
+}
 
 /***/ })
 /******/ ]);

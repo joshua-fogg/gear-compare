@@ -9,9 +9,7 @@ const Home = () => {
                 <img id='banner-img' src='./img/banner-gill.jpg' alt='Banner Image' />
             </div>
             Hello Yall Home PAge
-            <br />
-            <Link >Check Out Classes </Link>
-        </div >
+    </div >
     )
 }
 export default Home

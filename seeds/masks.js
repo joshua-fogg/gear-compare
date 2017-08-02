@@ -3,10 +3,10 @@ exports.seed = function(knex, Promise) {
     return knex('masks').del()
         .then(function() {
             // Inserts seed entries
-            return knex('table_name').insert([
-                { Model_ID: '1azx-Aql', Lense: 'Single', Frame: 'Plastic', Glass: 'Tempered', Skirt: 'Signle', Mask_Volume: 'Medium', Buckels: 'Cervical joint' },
-                { Model_ID: '2azy-mare', Lense: 'Double', Frame: 'Plastic', Glass: 'Normal', Skirt: 'Single', Mask_Volume: 'Low', Buckels: 'Hard Buckel' },
-                { Model_ID: '23a-apex', Lense: 'Single', Frame: 'Metal', Glass: 'Plastic', Skirt: 'Single', Mask_Volume: 'High', Buckels: 'Cervical' },
+            return knex('masks').insert([
+                { model_id: '1azx-Aql', lense: 'Single', frame: 'Plastic', lense_material: 'Tempered', Skirt: 'Signle', mask_volume: 'Medium', buckels: 'Cervical joint' },
+                { model_id: '2azy-mare', lense: 'Double', frame: 'Plastic', lense_material: 'Normal', Skirt: 'Single', mask_volume: 'Low', buckels: 'Hard Buckel' },
+                { model_id: '23a-apex', lense: 'Single', frame: 'Metal', lense_material: 'Plastic', Skirt: 'Single', mask_volume: 'High', buckels: 'Cervical' },
             ]);
         });
 };

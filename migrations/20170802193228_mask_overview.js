@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTableIfNotExists('mask_overview', function(table) {
-        table.increment('id').primary()
+        table.increments('id').primary()
         table.string('feature_name')
         table.string('feature_description')
     })
