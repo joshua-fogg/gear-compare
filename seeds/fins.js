@@ -4,7 +4,7 @@ exports.seed = function(knex, Promise) {
         .then(function() {
             // Inserts seed entries
             return knex('table_name').insert([
-                { Model_Id: 'Bio Fin', Variation: 'High Torque', Attachment: 'Spring Strap', Type: '1', colName: 'rowValue1', Model_Id: '1', colName: 'rowValue1' },
+                { Model_Id: 'Bio Fin', Variation: 'Torque', Heel_Type: 'Spring Strap', Fin_Type: 'Split Fin', Class: '', Colours: 'Black' },
                 { id: 2, colName: 'rowValue2' },
                 { id: 3, colName: 'rowValue3' }
             ]);
@@ -12,12 +12,12 @@ exports.seed = function(knex, Promise) {
 };
 
 
-// Model_I = primary
-// Variation = 
-// Attachment = Closed Heel, Open Heel Spring Strap, Open Heel, Clip-In
-//         table.string('Type')  = Blade, Split Fin, 
-//          
-//         table.string('Class') = Innovative (Nova / Slingshot), Colourful, Freediving, Turtle Fins,  Snorkelling
-//         table.string('Colours') = 1, <3, <7, <10
+// Model_Id = primary
+// Variation = high torque, v normal
+// Heel_Type = Closed Heel, Open Heel Spring Strap, Open Heel, Clip-In
+// Fin_Type = Blade, Split Fin
+// Class = Innovative (Nova / Slingshot), Colourful, Freediving, Turtle Fins, Snorkelling
+// Colours = 1, <3, <7, <10
+
 
 // Brian Lonsdorf
