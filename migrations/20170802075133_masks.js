@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
         table.string('Frame')
         table.string('Skirt')
         table.string('Mask_Volume')
-        table.string('')
+        table.string('Buckels')
     })
 };
 
