@@ -23510,12 +23510,21 @@ var Home = function Home() {
         { className: 'home' },
         _react2.default.createElement(
             'div',
-            { id: 'home-top' },
+            { id: 'top-banner' },
             _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
         ),
-        'Hello Yall Home PAge',
-        _react2.default.createElement('br', null),
-        'Check Out Classes'
+        _react2.default.createElement(
+            'div',
+            { className: 'info-box' },
+            'Hello Ya\'ll Home PAge',
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+                _reactRouterDom.Link,
+                { to: '/categories/' },
+                'Choose a Category to Compare'
+            ),
+            ']'
+        )
     );
 };
 exports.default = Home;
@@ -23555,6 +23564,8 @@ exports.default = Header;
 
 "use strict";
 
+
+var fs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 module.exports = {
     getUser: getUser,

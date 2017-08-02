@@ -5,12 +5,14 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <div id='home-top'>
+            <div id='top-banner'>
                 <img id='banner-img' src='./img/banner-gill.jpg' alt='Banner Image' />
             </div>
-            Hello Yall Home PAge
+            <div className='info-box'>
+                Hello Ya'll Home PAge
             <br />
-            Check Out Classes
+                <Link to={'/categories/'}>Choose a Category to Compare</Link>]
+                </div>
         </div >
     )
 }

@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = {
     getUser: getUser,
     getUsers: getUsers
