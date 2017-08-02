@@ -10,7 +10,7 @@ const Home = () => {
             </div>
             Hello Yall Home PAge
             <br />
-            <Link >Check Out Classes </Link>
+            Check Out Classes
         </div >
     )
 }

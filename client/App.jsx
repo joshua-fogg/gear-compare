@@ -24,10 +24,10 @@ class App extends React.Component {
         <div id='container'>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route path='/categories'
+          <Route path='/categories' />
         </div>
       </Router>
-        )
+    )
   }
 }
 
