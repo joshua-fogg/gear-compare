@@ -5,7 +5,8 @@ import { render, ReactDOM } from 'react-dom'
 import db from '../db.js'
 
 import Header from './components/Header'
-import Home from './Home'
+import Home from './components/Home'
+import EquipmentCategories from './components/Classes'
 
 
 
@@ -24,7 +25,7 @@ class App extends React.Component {
         <div id='container'>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route path='/categories' />
+          <Route path='/categories' component={EquipmentCategories} />
         </div>
       </Router>
     )

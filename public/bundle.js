@@ -9765,9 +9765,13 @@ var _Header = __webpack_require__(199);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Home = __webpack_require__(198);
+var _Home = __webpack_require__(228);
 
 var _Home2 = _interopRequireDefault(_Home);
+
+var _Classes = __webpack_require__(229);
+
+var _Classes2 = _interopRequireDefault(_Classes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9803,7 +9807,7 @@ var App = function (_React$Component) {
           { id: 'container' },
           _react2.default.createElement(_Header2.default, null),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories' })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories', component: _Classes2.default })
         )
       );
     }
@@ -23485,51 +23489,7 @@ Route.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Route);
 
 /***/ }),
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(83);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(192);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Home = function Home() {
-
-    return _react2.default.createElement(
-        'div',
-        { className: 'home' },
-        _react2.default.createElement(
-            'div',
-            { id: 'top-banner' },
-            _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: 'info-box' },
-            'Hello Ya\'ll Home PAge',
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-                _reactRouterDom.Link,
-                { to: '/categories/' },
-                'Choose a Category to Compare'
-            ),
-            ']'
-        )
-    );
-};
-exports.default = Home;
-
-/***/ }),
+/* 198 */,
 /* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23565,7 +23525,7 @@ exports.default = Header;
 "use strict";
 
 
-var fs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+// const fs = require('fs')
 
 module.exports = {
     getUser: getUser,
@@ -25900,6 +25860,93 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(83);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(192);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function Home() {
+
+    return _react2.default.createElement(
+        'div',
+        { className: 'home' },
+        _react2.default.createElement(
+            'div',
+            { id: 'top-banner' },
+            _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: 'info-box' },
+            'Hello Ya\'ll Home PAge',
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+                _reactRouterDom.Link,
+                { to: '/categories/' },
+                'Choose a Category to Compare'
+            )
+        )
+    );
+};
+exports.default = Home;
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(83);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(192);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function Home() {
+
+    return _react2.default.createElement(
+        'div',
+        { className: 'categories' },
+        _react2.default.createElement(
+            'div',
+            { id: 'top-banner' },
+            _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: 'info-box' },
+            _react2.default.createElement(
+                'p',
+                null,
+                'Choose one of the Classes Below to be taken to a page that shows a comparison between classes.'
+            )
+        ),
+        _react2.default.createElement('div', { className: 'category-list' })
+    );
+};
+exports.default = Home;
 
 /***/ })
 /******/ ]);
