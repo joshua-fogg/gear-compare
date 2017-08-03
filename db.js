@@ -1,14 +1,19 @@
 // const fs = require('fs')
 
 module.exports = {
-    getUser: getUser,
-    getUsers: getUsers
+    getMasks,
+    getFins,
+    getTableData
 }
 
-function getUsers(connection) {
-    return connection('users').select()
+function getTableData(table, connection) {
+    return connection(table).select()
 }
 
-function getUser(id, connection) {
-    return connection('users').where('id', id)
+function getMasks(connection) {
+    return connection('masks').select()
+}
+
+function getFins(connection) {
+    return connection('fins').where('id', id)
 }
