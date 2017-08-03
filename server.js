@@ -15,8 +15,15 @@ server.listen(PORT, function() {
 })
 
 
-server.get('/fins', (req, res) => {
+server.get('/finData', (req, res) => {
     db('fins')
+        .then((fins) => {
+            res.json(fins)
+        })
+})
+
+server.get('/maskData', (req, res) => {
+    db('masks')
         .then((fins) => {
             res.json(fins)
         })
