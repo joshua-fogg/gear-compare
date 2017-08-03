@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import dbdata from '../../data.js'
 
 
 const Home = () => {
@@ -16,7 +16,12 @@ const Home = () => {
                 </p>
             </div>
             <div className='category-list'>
-                {}
+                <div className='cat-trap'>
+
+                </div>
+                <div className='cat-trap'>
+
+                </div>
             </div>
         </div>
     )
