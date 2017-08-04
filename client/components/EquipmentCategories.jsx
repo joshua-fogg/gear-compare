@@ -7,8 +7,8 @@ const Home = () => {
 
     return (
         <div className='categories'>
-            <div id='top-banner'>
-                <img id='banner-img' src='./img/banner-gill.jpg' alt='Banner Image' />
+            <div className='top-banner'>
+                <img id='banner-img' src='/img/banner-fill.jpeg' alt='Banner Image' />
             </div>
             <div className='info-box'>
                 <p>

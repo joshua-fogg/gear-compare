@@ -11398,8 +11398,8 @@ var Home = function Home() {
         { className: 'categories' },
         _react2.default.createElement(
             'div',
-            { id: 'top-banner' },
-            _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
+            { className: 'top-banner' },
+            _react2.default.createElement('img', { id: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
         ),
         _react2.default.createElement(
             'div',
@@ -11444,7 +11444,11 @@ var Header = function Header() {
   return _react2.default.createElement(
     'div',
     { className: 'navbar' },
-    'Header'
+    _react2.default.createElement(
+      'div',
+      { className: 'top-banner' },
+      _react2.default.createElement('img', { className: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
+    )
   );
 };
 exports.default = Header;
@@ -11474,18 +11478,18 @@ var Home = function Home() {
     { className: 'home' },
     _react2.default.createElement(
       'div',
-      { className: 'top-banner' },
-      _react2.default.createElement('img', { className: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
-    ),
-    _react2.default.createElement(
-      'div',
       { className: 'info-box' },
       'Hello Ya\'ll Home Page',
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         _reactRouterDom.Link,
         { to: '/categories/' },
-        'Click to Choose a Category to Compare'
+        _react2.default.createElement(
+          'button',
+          null,
+          'Click to Choose a Category to Compare '
+        ),
+        ' '
       )
     )
   );
