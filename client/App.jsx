@@ -8,18 +8,17 @@ import Header from './components/Header'
 import Home from './components/Home'
 import EquipmentCategories from './components/Classes'
 
-
-
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       fillerState: 0
+      // define state here
     }
   }
-  //state call functions go here
+  // state call functions go here
 
-  render() {
+  render () {
     return (
       <Router>
         <div id='container'>
@@ -31,7 +30,5 @@ class App extends React.Component {
     )
   }
 }
-
-
 
 export default App

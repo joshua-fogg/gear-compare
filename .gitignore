@@ -58,5 +58,5 @@ typings/
 .env
 
 .node_modules
-bundle.js.map
-bundle.js
+public/bundle.js.map
+public/bundle.js
