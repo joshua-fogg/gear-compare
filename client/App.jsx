@@ -6,10 +6,10 @@ import db from '../db.js'
 
 import Header from './components/Header'
 import Home from './components/Home'
-import EquipmentCategories from './components/Classes'
+import EquipCats from './components/EquipmentCategories.jsx'
 
 class App extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       fillerState: 0
@@ -18,13 +18,13 @@ class App extends React.Component {
   }
   // state call functions go here
 
-  render () {
+  render() {
     return (
       <Router>
-        <div id='container'>
+        <div className='container'>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route path='/categories' component={EquipmentCategories} />
+          <Route path='/categories' component={EquipCats} />
         </div>
       </Router>
     )

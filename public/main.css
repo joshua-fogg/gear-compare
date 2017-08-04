@@ -5,9 +5,12 @@ body {
 #navbar {
     background: black;
     color: white;
+    width: 80%;
+    height: 15%;
+    ;
 }
 
-#home {
+.home {
     background: orange;
     color: black;
 }
@@ -22,7 +25,15 @@ body {
 .cat-trap {
     width: 150px;
     height: 200px;
-    background-image: url(data:image/svg+xml,%3Csvg width='360' height='360' viewBox='0 0 360 360' xm….67l-2.84-2.618-4.854 3.526 3.116 6.778H360v-7.685z'/%3E%3C/g%3E%3C/svg%3E);
-    margin-left: 10%;
-    margin-right: 10%;
+}
+
+.banner-img {
+    width: 50%;
+    height: auto;
+    opacity: 1;
+}
+
+.container {
+    background-color: orange;
+    align: center;
 }

@@ -11318,9 +11318,9 @@ var _Home = __webpack_require__(100);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Classes = __webpack_require__(98);
+var _EquipmentCategories = __webpack_require__(98);
 
-var _Classes2 = _interopRequireDefault(_Classes);
+var _EquipmentCategories2 = _interopRequireDefault(_EquipmentCategories);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11354,10 +11354,10 @@ var App = function (_React$Component) {
         null,
         _react2.default.createElement(
           'div',
-          { id: 'container' },
+          { className: 'container' },
           _react2.default.createElement(_Header2.default, null),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories', component: _Classes2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories', component: _EquipmentCategories2.default })
         )
       );
     }
@@ -11443,7 +11443,7 @@ var Header = function Header() {
 
   return _react2.default.createElement(
     'div',
-    { id: 'navbar' },
+    { className: 'navbar' },
     'Header'
   );
 };
@@ -11474,18 +11474,18 @@ var Home = function Home() {
     { className: 'home' },
     _react2.default.createElement(
       'div',
-      { id: 'top-banner' },
-      _react2.default.createElement('img', { id: 'banner-img', src: './img/banner-gill.jpg', alt: 'Banner Image' })
+      { className: 'top-banner' },
+      _react2.default.createElement('img', { className: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
     ),
     _react2.default.createElement(
       'div',
       { className: 'info-box' },
-      'Hello Ya\'ll Home PAge',
+      'Hello Ya\'ll Home Page',
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         _reactRouterDom.Link,
         { to: '/categories/' },
-        'Choose a Category to Compare'
+        'Click to Choose a Category to Compare'
       )
     )
   );

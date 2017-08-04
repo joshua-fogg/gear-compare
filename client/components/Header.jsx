@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
   return (
-    <div id='navbar'>
+    <div className='navbar'>
       Header
     </div >
   )
 }
 export default Header
-  
