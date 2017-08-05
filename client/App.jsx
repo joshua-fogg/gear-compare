@@ -6,7 +6,9 @@ import db from '../db.js'
 
 import Header from './components/Header'
 import Home from './components/Home'
-import EquipCats from './components/EquipmentCategories.jsx'
+import EquipCats from './components/EquipmentCategories'
+import Compare from './components/Compare'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +26,9 @@ class App extends React.Component {
         <div className='container'>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route path='/categories' component={EquipCats} />
+          <Route path='/categories/:class' component={EquipCats} />
+          <Route path='/compare' component={Compare} />
+
         </div>
       </Router>
     )

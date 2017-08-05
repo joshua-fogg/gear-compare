@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+const Compare = () => {
 
-    return (
-        <div className='coppare'>
-            <div id='compare-filters'>
-                filters to apply
+  return (
+    <div className='compare'>
+      <div className='compare-filters'>
+        filters to apply
             </div>
-            <div id='#'>
-            Panel for listing gear
+      {}<div className='#'>
+        Panel for listing gear
             </div>
     </div >
-    )
+  )
 }
-export default Home
+export default Compare
