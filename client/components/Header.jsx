@@ -16,7 +16,3 @@ const Header = () => {
   )
 }
 export default Header
-
-function redirect(url) {
-  return window.location = url
-}

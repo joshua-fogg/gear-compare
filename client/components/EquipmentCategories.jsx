@@ -13,12 +13,25 @@ function categories(props) {
           Choose one of the Classes Below to be taken to a page that shows a comparison between classes.
                 </p>
       </div>
-      <div className='categories'>
+      <div className='categories columns'>
         {props.categories.map((category) => {
           return (
-            < div className='category' key={category.id} >
-              <h2>{category.name}</h2>
-              <h3>{category.summary}</h3>
+            <div className='category card' key={category.id} >
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="http://via.placeholder.com/300x300" alt="Image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{category.name}</p>
+                  </div>
+                </div>
+                <div class="content">
+                  {category.summary}
+                </div>
+              </div>
             </div>
           )
         })}

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Compare = (props) => {
+  const category = rops.match.params.match.category
   const firstProduct = props.params.match.id1
   const secondProduct = props.params.match.id2
   const thirdProduct = props.params.match.id3
