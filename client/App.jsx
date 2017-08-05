@@ -27,9 +27,10 @@ class App extends React.Component {
         <div className='container'>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route path='/categories/' component={Categories} categories={this.state.categories} />
+          <Route path='/categories' render={() => (
+            <Categories categories={this.state.categories} />
+          )} />
           <Route path='/compare' component={Compare} />
-
         </div>
       </Router>
     )

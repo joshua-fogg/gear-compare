@@ -11354,6 +11354,8 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         _reactRouterDom.HashRouter,
         null,
@@ -11362,7 +11364,9 @@ var App = function (_React$Component) {
           { className: 'container' },
           _react2.default.createElement(_Header2.default, null),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories/', component: _EquipmentCategories2.default, categories: this.state.categories }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories', render: function render() {
+              return _react2.default.createElement(_EquipmentCategories2.default, { categories: _this2.state.categories });
+            } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/compare', component: _Compare2.default })
         )
       );
@@ -11435,16 +11439,11 @@ var _data2 = _interopRequireDefault(_data);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home(props) {
-
+function categories(props) {
   return _react2.default.createElement(
     'div',
     { className: 'categories' },
-    _react2.default.createElement(
-      'div',
-      { className: 'top-banner' },
-      _react2.default.createElement('img', { id: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
-    ),
+    _react2.default.createElement('div', { className: 'top-banner' }),
     _react2.default.createElement(
       'div',
       { className: 'info-box' },
@@ -11460,7 +11459,7 @@ var Home = function Home(props) {
       props.categories.map(function (category) {
         return _react2.default.createElement(
           'div',
-          { className: 'category' },
+          { className: 'category', key: category.id },
           _react2.default.createElement(
             'h2',
             null,
@@ -11475,8 +11474,8 @@ var Home = function Home(props) {
       })
     )
   );
-};
-exports.default = Home;
+}
+exports.default = categories;
 
 /***/ }),
 /* 100 */
@@ -11521,7 +11520,7 @@ var Header = function Header() {
       ),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/categories/' },
+        { to: '/categories' },
         _react2.default.createElement(
           'button',
           null,
