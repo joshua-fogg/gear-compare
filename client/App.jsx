@@ -6,7 +6,7 @@ import db from '../db.js'
 
 import Header from './components/Header'
 import Home from './components/Home'
-import EquipCats from './components/EquipmentCategories'
+import Categories from './components/EquipmentCategories'
 import Compare from './components/Compare'
 
 
@@ -14,7 +14,8 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      fillerState: 0
+      fillerState: 0,
+      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks' }]
       // define state here
     }
   }
@@ -26,7 +27,7 @@ class App extends React.Component {
         <div className='container'>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route path='/categories/:class' component={EquipCats} />
+          <Route path='/categories/:class' component={Categories} categories={this.state.categories} />
           <Route path='/compare' component={Compare} />
 
         </div>

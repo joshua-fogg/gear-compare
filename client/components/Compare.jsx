@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Compare = () => {
+const Compare = (props) => {
 
   return (
     <div className='compare'>

@@ -11343,7 +11343,8 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
-      fillerState: 0
+      fillerState: 0,
+      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks' }]
       // define state here
     };
     return _this;
@@ -11361,7 +11362,7 @@ var App = function (_React$Component) {
           { className: 'container' },
           _react2.default.createElement(_Header2.default, null),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories/:class', component: _EquipmentCategories2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories/:class', component: _EquipmentCategories2.default, categories: this.state.categories }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/compare', component: _Compare2.default })
         )
       );
@@ -11392,7 +11393,7 @@ var _reactRouterDom = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Compare = function Compare() {
+var Compare = function Compare(props) {
 
   return _react2.default.createElement(
     'div',
@@ -11419,7 +11420,7 @@ exports.default = Compare;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = __webpack_require__(6);
@@ -11434,32 +11435,46 @@ var _data2 = _interopRequireDefault(_data);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home() {
+var Home = function Home(props) {
 
-    return _react2.default.createElement(
-        'div',
-        { className: 'categories' },
-        _react2.default.createElement(
-            'div',
-            { className: 'top-banner' },
-            _react2.default.createElement('img', { id: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: 'info-box' },
-            _react2.default.createElement(
-                'p',
-                null,
-                'Choose one of the Classes Below to be taken to a page that shows a comparison between classes.'
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: 'category-list' },
-            _react2.default.createElement('div', { className: 'cat-trap' }),
-            _react2.default.createElement('div', { className: 'cat-trap' })
-        )
-    );
+  return _react2.default.createElement(
+    'div',
+    { className: 'categories' },
+    _react2.default.createElement(
+      'div',
+      { className: 'top-banner' },
+      _react2.default.createElement('img', { id: 'banner-img', src: '/img/banner-fill.jpeg', alt: 'Banner Image' })
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'info-box' },
+      _react2.default.createElement(
+        'p',
+        null,
+        'Choose one of the Classes Below to be taken to a page that shows a comparison between classes.'
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'categories' },
+      props.categories.map(function (category) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'category' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            category.name
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            category.summary
+          )
+        );
+      })
+    )
+  );
 };
 exports.default = Home;
 
@@ -11489,6 +11504,11 @@ var Header = function Header() {
     { className: 'header' },
     _react2.default.createElement(
       'div',
+      { className: 'nav-bar-image' },
+      _react2.default.createElement('img', { className: 'banner-img', src: '/img/banner-top.jpg' })
+    ),
+    _react2.default.createElement(
+      'div',
       { className: 'nav-bar' },
       _react2.default.createElement(
         _reactRouterDom.Link,
@@ -11501,7 +11521,7 @@ var Header = function Header() {
       ),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/categories' },
+        { to: '/categories/' },
         _react2.default.createElement(
           'button',
           null,
