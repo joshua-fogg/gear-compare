@@ -11310,6 +11310,10 @@ var _db = __webpack_require__(104);
 
 var _db2 = _interopRequireDefault(_db);
 
+var _data = __webpack_require__(103);
+
+var _data2 = _interopRequireDefault(_data);
+
 var _Header = __webpack_require__(100);
 
 var _Header2 = _interopRequireDefault(_Header);
@@ -11398,6 +11402,9 @@ var _reactRouterDom = __webpack_require__(29);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Compare = function Compare(props) {
+  var firstProduct = props.params.match.id1;
+  var secondProduct = props.params.match.id2;
+  var thirdProduct = props.params.match.id3;
 
   return _react2.default.createElement(
     'div',

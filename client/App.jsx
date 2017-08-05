@@ -3,6 +3,7 @@ import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 import { render, ReactDOM } from 'react-dom'
 
 import db from '../db.js'
+import catalogue from '../data'
 
 import Header from './components/Header'
 import Home from './components/Home'
