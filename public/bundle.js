@@ -11362,7 +11362,7 @@ var App = function (_React$Component) {
           { className: 'container' },
           _react2.default.createElement(_Header2.default, null),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories/:class', component: _EquipmentCategories2.default, categories: this.state.categories }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/categories/', component: _EquipmentCategories2.default, categories: this.state.categories }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/compare', component: _Compare2.default })
         )
       );
