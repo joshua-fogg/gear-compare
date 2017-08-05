@@ -11371,7 +11371,7 @@ var App = function (_React$Component) {
           _react2.default.createElement(_reactRouterDom.Route, { path: '/categories', render: function render() {
               return _react2.default.createElement(_EquipmentCategories2.default, { categories: _this2.state.categories });
             } }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/compare', component: _Compare2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/compare/:id1/:id2/:id3', component: _Compare2.default })
         )
       );
     }
