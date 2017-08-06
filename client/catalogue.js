@@ -15,3 +15,4 @@ const data = {
     // make = maker / brand
     // model = model specific name
     //
+export default data

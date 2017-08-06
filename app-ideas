@@ -35,6 +35,7 @@ Mask features:
 
 
  Direction:
+ - optional rendering for category-id
  - database needs to have universal layout between categories
  but this cant be done....
  - instead assess category and load different component??? turnerary assessor.
