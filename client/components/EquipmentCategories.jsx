@@ -17,26 +17,29 @@ const categories = (props) => {
         {props.categories.map((category) => {
           return (
             <div className='category card' key={category.id} >
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img src="http://via.placeholder.com/300x300" alt="Image" />
-                </figure>
-              </div>
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">{category.name}</p>
+              <Link to={`/compare/` + category.name}>
+                <div className="card-image">
+                  <figure className="image is-4by3">
+                    <img src="http://via.placeholder.com/300x300" alt="Image" />
+                  </figure>
+                </div>
+                <div className="card-content">
+                  <div className="media">
+                    <div className="media-content">
+                      <p className="title is-4">{category.name}</p>
+                    </div>
+                  </div>
+                  <div className="content">
+                    {category.summary}
                   </div>
                 </div>
-                <div className="content">
-                  {category.summary}
-                </div>
-              </div>
+              </Link>
             </div>
+
           )
         })}
       </div>
-    </div>
+    </div >
   )
 }
 
