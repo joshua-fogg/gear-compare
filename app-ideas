@@ -30,3 +30,11 @@ Mask features:
  Snorkel:
  - Mothpiece: max-comfort, standard, comfobite, mouth-mouldable
  - Mouthpiece-type: silicone, rubber, 
+
+
+
+
+ Direction:
+ - database needs to have universal layout between categories
+ but this cant be done....
+ - instead assess category and load different component??? turnerary assessor.

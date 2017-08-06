@@ -7305,8 +7305,11 @@ module.exports = __webpack_require__(139);
 
 
 var data = {
-    "fins": [{ "prod_number": "1", "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": "", "colours": "Black" }, { "prod_number": "2", "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": "", "colours": "Black" }, { "prod_number": "3", "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "prod_number": "", "brand": "Mares", "model": "", "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }],
+    "fins": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }],
     "masks": [{ "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Signle", "mask_volume": "Medium", "buckels": "Cervical joint" }, { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" }, { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }]
+    // make = maker / brand
+    // model = model specific name
+    //
 
 };
 
@@ -11319,14 +11322,6 @@ var _reactRouterDom = __webpack_require__(29);
 
 var _reactDom = __webpack_require__(61);
 
-var _db = __webpack_require__(104);
-
-var _db2 = _interopRequireDefault(_db);
-
-var _data = __webpack_require__(62);
-
-var _data2 = _interopRequireDefault(_data);
-
 var _Header = __webpack_require__(101);
 
 var _Header2 = _interopRequireDefault(_Header);
@@ -11385,7 +11380,7 @@ var App = function (_React$Component) {
               return _react2.default.createElement(_EquipmentCategories2.default, { categories: _this2.state.categories });
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/compare/:category/:id1/:id2/:id3', render: function render() {
-              return _react2.default.createElement(_Compare2.default, { catalogue: _data2.default });
+              return _react2.default.createElement(_Compare2.default, { catalogue: catalogue });
             } })
         )
       );
@@ -11414,13 +11409,36 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(29);
 
+var _db = __webpack_require__(104);
+
+var _db2 = _interopRequireDefault(_db);
+
+var _catalogue = __webpack_require__(62);
+
+var _catalogue2 = _interopRequireDefault(_catalogue);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Compare = function Compare(props) {
-  var category = rops.match.params.match.category;
+  var category = props.match.params.match.category;
   var firstProduct = props.params.match.id1;
   var secondProduct = props.params.match.id2;
   var thirdProduct = props.params.match.id3;
+
+  if (isNaN(category) === false) {
+    //reroute to categoryPage
+    console.log('category is number');
+  } else {
+    //has category
+    // assess category & mount component
+    //map category
+    console.log('category is string');
+  }
+
+  // based on category, must pull different data from db and set it to props / state.
+  // must map out db data into boxes.
+  //add checkbox / select state for comparing items
+  //have function to show only those items that are viewed.
 
   return _react2.default.createElement(
     'div',
@@ -11456,13 +11474,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(29);
 
-var _data = __webpack_require__(62);
+var _catalogue = __webpack_require__(62);
 
-var _data2 = _interopRequireDefault(_data);
+var _catalogue2 = _interopRequireDefault(_catalogue);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function categories(props) {
+var categories = function categories(props) {
   return _react2.default.createElement(
     'div',
     { className: 'categories' },
@@ -11518,7 +11536,8 @@ function categories(props) {
       })
     )
   );
-}
+};
+
 exports.default = categories;
 
 /***/ }),
@@ -11666,8 +11685,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 "use strict";
 
-
-// const fs = require('fs')
 
 module.exports = {
     getMasks: getMasks,
