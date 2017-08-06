@@ -23,14 +23,16 @@ class App extends React.Component {
     return (
       <Router>
         <div className='container'>
-          <Header />
-          <Route exact path='/' component={Home} />
-          <Route path='/categories' render={() => (
-            <Categories categories={this.state.categories} />
-          )} />
-          <Route path='/compare/:category/:id1/:id2/:id3' render={() => (
-            <Compare catalogue={catalogue} />
-          )} />
+          <div className='sub-container'>
+            <Header />
+            <Route exact path='/' component={Home} />
+            <Route path='/categories' render={() => (
+              <Categories categories={this.state.categories} />
+            )} />
+            <Route path='/compare/:category/:id1/:id2/:id3' render={() => (
+              <Compare catalogue={catalogue} />
+            )} />
+          </div>
         </div>
       </Router>
     )
