@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import catalogue from '../../public/dbs/catalogue'
+import catalogue from '../catalogue'
 
+//way to link  each card to compare component
 
 const categories = (props) => {
   return (

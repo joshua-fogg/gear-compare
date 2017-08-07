@@ -7,8 +7,6 @@ import Home from './components/Home'
 import Categories from './components/EquipmentCategories'
 import Compare from './components/Compare'
 
-import catalogue from '../public/dbs/catalogue.js'
-
 class App extends React.Component {
   constructor(props) {
     super(props)

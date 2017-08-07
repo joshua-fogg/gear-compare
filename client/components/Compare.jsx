@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import db from '../../public/dbs/db'
-import catalogue from '../../public/dbs/catalogue'
+import catalogue from '../catalogue'
 
 const Compare = (props) => {
   const category = props.params.match.category.toLowerCase()
@@ -14,6 +14,7 @@ const Compare = (props) => {
     <div className='compare'>
       <div className='compare-filters'>
         fins name
+        {console.log(category)}
             </div>
       <div className='category-items'>
         {catalogue.category.map((categoryItem) => {
