@@ -5,27 +5,39 @@ import catalogue from '../../catalogue'
 
 const Masks = catalogue.Masks
 
-import Masks from './gear/Masks'
-import Fins from './gear/Fins'
-import Tanks from './gear/Tanks'
-
 class MaskList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-    console.log(props.match.params)
-  }
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
 
-  render() {
-    return (
-      <div className='masks'>
-        <div className='category-items'>
-          Place to mount items.
-          
-        </div>
+    render() {
+        return (
+            <div className='masks'>
+                {Masks.map((mask)=>
+                <div className='category-items'>
+                    <div className='category card' key={mask.id} >
+                        <div className="card-image">
+                            <figure className="image is-4by3">
+                                <img src="http://via.placeholder.com/300x300" alt="Image" />
+                            </figure>
+                        </div>
+                        <div className="card-content">
+                            <div className="media">
+                                <div className="media-content">
+                                    <p className="title is-4">{mask.model_id}</p>
+                                </div>
+                            </div>
+                            <div className="content">
+                                {mask.buckels}
+                            </div>
+                        </div>
+                </div>
+            </div>
+                )}
       </div >
     )
-  }
+    }
 }
 
 export default MaskList

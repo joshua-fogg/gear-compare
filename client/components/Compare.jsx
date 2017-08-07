@@ -18,15 +18,11 @@ class Compare extends Component {
   render() {
     return (
       <div className='compare'>
-        {/*<div className='compare-filters'>
-          fins name
-            </div>*/}
         <div className='category-items'>
-          Place to mount items.
-          <br />
-          {this.props.match.params.id = 'Masks' && <Masks />}
-          {this.props.match.params = 'Fins' && <Fins />}
-          {this.props.match.params = 'Tanks' && <Tanks />}
+          <div> place to mount items. </div>
+          {this.props.match.params.id === 'Masks' && <Masks />}
+          {this.props.match.params.id === 'Fins' && <Fins />}
+          {this.props.match.params.id === 'Tanks' && <Tanks />}
         </div>
       </div >
     )

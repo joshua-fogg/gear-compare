@@ -11460,11 +11460,14 @@ var Compare = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'category-items' },
-          'Place to mount items.',
-          _react2.default.createElement('br', null),
-          this.props.match.params.id = 'Masks' && _react2.default.createElement(_Masks2.default, null),
-          this.props.match.params = 'Fins' && _react2.default.createElement(_Fins2.default, null),
-          this.props.match.params = 'Tanks' && _react2.default.createElement(_Tanks2.default, null)
+          _react2.default.createElement(
+            'div',
+            null,
+            ' place to mount items. '
+          ),
+          this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, null),
+          this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, null),
+          this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, null)
         )
       );
     }
@@ -26126,9 +26129,104 @@ exports.default = valueEqual;
 
 /***/ }),
 /* 231 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Duplicate declaration \"Masks\"\n\n\u001b[0m \u001b[90m  6 | \u001b[39m\u001b[36mconst\u001b[39m \u001b[33mMasks\u001b[39m \u001b[33m=\u001b[39m catalogue\u001b[33m.\u001b[39m\u001b[33mMasks\u001b[39m\n \u001b[90m  7 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mMasks\u001b[39m from \u001b[32m'./gear/Masks'\u001b[39m\n \u001b[90m    | \u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mFins\u001b[39m from \u001b[32m'./gear/Fins'\u001b[39m\n \u001b[90m 10 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mTanks\u001b[39m from \u001b[32m'./gear/Tanks'\u001b[39m\n \u001b[90m 11 | \u001b[39m\u001b[0m\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(29);
+
+var _catalogue = __webpack_require__(98);
+
+var _catalogue2 = _interopRequireDefault(_catalogue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Masks = _catalogue2.default.Masks;
+
+var MaskList = function (_Component) {
+    _inherits(MaskList, _Component);
+
+    function MaskList(props) {
+        _classCallCheck(this, MaskList);
+
+        var _this = _possibleConstructorReturn(this, (MaskList.__proto__ || Object.getPrototypeOf(MaskList)).call(this, props));
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(MaskList, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'masks' },
+                Masks.map(function (mask) {
+                    return _react2.default.createElement(
+                        'div',
+                        { className: 'category-items' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'category card', key: mask.id },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'card-image' },
+                                _react2.default.createElement(
+                                    'figure',
+                                    { className: 'image is-4by3' },
+                                    _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'card-content' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'media' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'media-content' },
+                                        _react2.default.createElement(
+                                            'p',
+                                            { className: 'title is-4' },
+                                            mask.model_id
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'content' },
+                                    mask.buckels
+                                )
+                            )
+                        )
+                    );
+                })
+            );
+        }
+    }]);
+
+    return MaskList;
+}(_react.Component);
+
+exports.default = MaskList;
 
 /***/ }),
 /* 232 */
@@ -26172,7 +26270,6 @@ var FinList = function (_Component) {
     var _this = _possibleConstructorReturn(this, (FinList.__proto__ || Object.getPrototypeOf(FinList)).call(this, props));
 
     _this.state = {};
-    console.log(props.match.params);
     return _this;
   }
 
@@ -26185,7 +26282,7 @@ var FinList = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'category-items' },
-          'Place to mount items.'
+          'Fins'
         )
       );
     }
@@ -26238,7 +26335,6 @@ var TankList = function (_Component) {
     var _this = _possibleConstructorReturn(this, (TankList.__proto__ || Object.getPrototypeOf(TankList)).call(this, props));
 
     _this.state = {};
-    console.log(props.match.params);
     return _this;
   }
 
@@ -26251,7 +26347,7 @@ var TankList = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'category-items' },
-          'Place to mount items.'
+          'Tanks'
         )
       );
     }
