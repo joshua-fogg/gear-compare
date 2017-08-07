@@ -11381,7 +11381,25 @@ var App = function (_React$Component) {
 exports.default = App;
 
 /***/ }),
-/* 98 */,
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var data = {
+    "Fins": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }],
+    "Masks": [{ "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Signle", "mask_volume": "Medium", "buckels": "Cervical joint" }, { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" }, { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }],
+    "Tanks": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }]
+    // make = maker / brand
+    // model = model specific name
+    //
+};exports.default = data;
+
+/***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11404,11 +11422,11 @@ var _Masks = __webpack_require__(231);
 
 var _Masks2 = _interopRequireDefault(_Masks);
 
-var _Fins = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./gear/Fins\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var _Fins = __webpack_require__(232);
 
 var _Fins2 = _interopRequireDefault(_Fins);
 
-var _Tanks = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./gear/Tanks\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var _Tanks = __webpack_require__(233);
 
 var _Tanks2 = _interopRequireDefault(_Tanks);
 
@@ -11454,15 +11472,15 @@ var Compare = function (_Component) {
 
   return Compare;
 }(_react.Component);
+
+exports.default = Compare;
+
 // based on category, must pull different data from db and set it to props / state.
 // must map out db data into boxes.
 //add checkbox / select state for comparing items
 //have function to show only those items that are viewed.
 /*something = somethin ? action to takeif correct*/
 //  can either turnerary mount component or render certain functions
-
-
-exports.default = Compare;
 
 /***/ }),
 /* 100 */
@@ -26108,10 +26126,141 @@ exports.default = valueEqual;
 
 /***/ }),
 /* 231 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Duplicate declaration \"Masks\"\n\n\u001b[0m \u001b[90m  6 | \u001b[39m\u001b[36mconst\u001b[39m \u001b[33mMasks\u001b[39m \u001b[33m=\u001b[39m catalogue\u001b[33m.\u001b[39m\u001b[33mMasks\u001b[39m\n \u001b[90m  7 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mMasks\u001b[39m from \u001b[32m'./gear/Masks'\u001b[39m\n \u001b[90m    | \u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mFins\u001b[39m from \u001b[32m'./gear/Fins'\u001b[39m\n \u001b[90m 10 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mTanks\u001b[39m from \u001b[32m'./gear/Tanks'\u001b[39m\n \u001b[90m 11 | \u001b[39m\u001b[0m\n");
+
+/***/ }),
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(29);
+
+var _catalogue = __webpack_require__(98);
+
+var _catalogue2 = _interopRequireDefault(_catalogue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Fins = _catalogue2.default.Fins;
+
+var FinList = function (_Component) {
+  _inherits(FinList, _Component);
+
+  function FinList(props) {
+    _classCallCheck(this, FinList);
+
+    var _this = _possibleConstructorReturn(this, (FinList.__proto__ || Object.getPrototypeOf(FinList)).call(this, props));
+
+    _this.state = {};
+    console.log(props.match.params);
+    return _this;
+  }
+
+  _createClass(FinList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'masks' },
+        _react2.default.createElement(
+          'div',
+          { className: 'category-items' },
+          'Place to mount items.'
+        )
+      );
+    }
+  }]);
+
+  return FinList;
+}(_react.Component);
+
+exports.default = FinList;
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(29);
+
+var _catalogue = __webpack_require__(98);
+
+var _catalogue2 = _interopRequireDefault(_catalogue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Tanks = _catalogue2.default.Tanks;
+
+var TankList = function (_Component) {
+  _inherits(TankList, _Component);
+
+  function TankList(props) {
+    _classCallCheck(this, TankList);
+
+    var _this = _possibleConstructorReturn(this, (TankList.__proto__ || Object.getPrototypeOf(TankList)).call(this, props));
+
+    _this.state = {};
+    console.log(props.match.params);
+    return _this;
+  }
+
+  _createClass(TankList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'masks' },
+        _react2.default.createElement(
+          'div',
+          { className: 'category-items' },
+          'Place to mount items.'
+        )
+      );
+    }
+  }]);
+
+  return TankList;
+}(_react.Component);
+
+exports.default = TankList;
 
 /***/ })
 /******/ ]);
