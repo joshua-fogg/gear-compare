@@ -7,7 +7,6 @@ import Tanks from './gear/Tanks'
 
 class Compare extends Component {
 
-
   constructor(props) {
     super(props)
     this.state = {}

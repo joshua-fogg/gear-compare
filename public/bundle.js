@@ -26135,7 +26135,7 @@ exports.default = valueEqual;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26161,69 +26161,69 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Masks = _catalogue2.default.Masks;
 
 var MaskList = function (_Component) {
-    _inherits(MaskList, _Component);
+  _inherits(MaskList, _Component);
 
-    function MaskList(props) {
-        _classCallCheck(this, MaskList);
+  function MaskList(props) {
+    _classCallCheck(this, MaskList);
 
-        var _this = _possibleConstructorReturn(this, (MaskList.__proto__ || Object.getPrototypeOf(MaskList)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (MaskList.__proto__ || Object.getPrototypeOf(MaskList)).call(this, props));
 
-        _this.state = {};
-        return _this;
-    }
+    _this.state = {};
+    return _this;
+  }
 
-    _createClass(MaskList, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
+  _createClass(MaskList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'masks' },
+        Masks.map(function (mask) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'category-items' },
+            _react2.default.createElement(
+              'div',
+              { className: 'category card', key: mask.id },
+              _react2.default.createElement(
                 'div',
-                { className: 'masks' },
-                Masks.map(function (mask) {
-                    return _react2.default.createElement(
-                        'div',
-                        { className: 'category-items' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'category card', key: mask.id },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card-image' },
-                                _react2.default.createElement(
-                                    'figure',
-                                    { className: 'image is-4by3' },
-                                    _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card-content' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'media' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'media-content' },
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'title is-4' },
-                                            mask.model_id
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'content' },
-                                    mask.buckels
-                                )
-                            )
-                        )
-                    );
-                })
-            );
-        }
-    }]);
+                { className: 'card-image' },
+                _react2.default.createElement(
+                  'figure',
+                  { className: 'image is-4by3' },
+                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'card-content' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'media' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'media-content' },
+                    _react2.default.createElement(
+                      'p',
+                      { className: 'title is-4', key: mask.id },
+                      mask.model_id
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'content' },
+                  mask.buckels
+                )
+              )
+            )
+          );
+        })
+      );
+    }
+  }]);
 
-    return MaskList;
+  return MaskList;
 }(_react.Component);
 
 exports.default = MaskList;
@@ -26278,12 +26278,50 @@ var FinList = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'masks' },
-        _react2.default.createElement(
-          'div',
-          { className: 'category-items' },
-          'Fins'
-        )
+        { className: 'fins' },
+        Fins.map(function (fin) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'category-items' },
+            _react2.default.createElement(
+              'div',
+              { className: 'category card', key: fin.id },
+              _react2.default.createElement(
+                'div',
+                { className: 'card-image' },
+                _react2.default.createElement(
+                  'figure',
+                  { className: 'image is-4by3' },
+                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'card-content' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'media' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'media-content' },
+                    _react2.default.createElement(
+                      'p',
+                      { className: 'title is-4' },
+                      fin.brand,
+                      ' - ',
+                      fin.model
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'content' },
+                  fin.buckels
+                )
+              )
+            )
+          );
+        })
       );
     }
   }]);
@@ -26344,11 +26382,47 @@ var TankList = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'masks' },
-        _react2.default.createElement(
-          'div',
-          { className: 'category-items' },
-          'Tanks'
-        )
+        Tanks.map(function (tank) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'category-items' },
+            _react2.default.createElement(
+              'div',
+              { className: 'category card', key: tank.id },
+              _react2.default.createElement(
+                'div',
+                { className: 'card-image' },
+                _react2.default.createElement(
+                  'figure',
+                  { className: 'image is-4by3' },
+                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'card-content' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'media' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'media-content' },
+                    _react2.default.createElement(
+                      'p',
+                      { className: 'title is-4' },
+                      'Tank Model ID'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'content' },
+                  'Tank Something here'
+                )
+              )
+            )
+          );
+        })
       );
     }
   }]);
