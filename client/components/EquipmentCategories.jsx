@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import catalogue from '../catalogue'
 
 //way to link  each card to compare component
 
@@ -11,7 +10,7 @@ const categories = (props) => {
       </div>
       <div className='info-box'>
         <p className='info-box-p'>
-          Choose one of the Classes Below to be taken to a page that shows a comparison between classes.
+          Choose which equipment class you would like to look at bellow.
         </p>
       </div>
       <div className='categories columns'>

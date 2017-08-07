@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       fillerState: 0,
-      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' }]
+      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' },{ id: 3, name: 'Tanks', summary: 'Take a closer look at dive tanks', picture: '' }]
       // define state here
     }
   }
@@ -28,8 +28,8 @@ class App extends React.Component {
             <Route path='/categories' render={() => (
               <Categories categories={this.state.categories} />
             )} />
-            <Route path='/compare/:category/:id1/:id2/:id3' render={() => (
-              <Compare catalogue={catalogue} />
+            <Route path='/compare/:id' render={(props) => (
+              <Compare {...props}/>
             )} />
           </div>
         </div>

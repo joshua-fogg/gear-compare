@@ -11340,7 +11340,7 @@ var App = function (_React$Component) {
 
     _this.state = {
       fillerState: 0,
-      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' }]
+      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' }, { id: 3, name: 'Tanks', summary: 'Take a closer look at dive tanks', picture: '' }]
       // define state here
     };
     return _this;
@@ -11366,8 +11366,8 @@ var App = function (_React$Component) {
             _react2.default.createElement(_reactRouterDom.Route, { path: '/categories', render: function render() {
                 return _react2.default.createElement(_EquipmentCategories2.default, { categories: _this2.state.categories });
               } }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/compare/:category/:id1/:id2/:id3', render: function render() {
-                return _react2.default.createElement(_Compare2.default, { catalogue: catalogue });
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/compare/:id', render: function render(props) {
+                return _react2.default.createElement(_Compare2.default, props);
               } })
           )
         )
@@ -11391,6 +11391,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
@@ -11407,68 +11409,68 @@ var _catalogue2 = _interopRequireDefault(_catalogue);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Compare = function Compare(props) {
-  var category = props.params.match.category.toLowerCase();
-  var firstProduct = props.params.match.id1;
-  var secondProduct = props.params.match.id2;
-  var thirdProduct = props.params.match.id3;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return _react2.default.createElement(
-    'div',
-    { className: 'compare' },
-    _react2.default.createElement(
-      'div',
-      { className: 'compare-filters' },
-      'fins name',
-      console.log(category)
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'category-items' },
-      _catalogue2.default.category.map(function (categoryItem) {
-        return _react2.default.createElement(
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Compare = function (_Component) {
+  _inherits(Compare, _Component);
+
+  function Compare(props) {
+    _classCallCheck(this, Compare);
+
+    var _this = _possibleConstructorReturn(this, (Compare.__proto__ || Object.getPrototypeOf(Compare)).call(this, props));
+
+    console.log(props);
+    _this.state = {
+      catalogue: _catalogue2.default
+    };
+    return _this;
+  }
+
+  _createClass(Compare, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'compare' },
+        _react2.default.createElement(
           'div',
-          { className: 'card' },
-          _react2.default.createElement(
+          { className: 'category-items' },
+          'Place to mount items.',
+          _react2.default.createElement('br', null),
+          this.props.match.params = "Masks" ? null : _react2.default.createElement(
             'div',
-            { className: 'card-image' },
-            _react2.default.createElement(
-              'figure',
-              { className: 'image is-4by3' },
-              _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
-            )
+            null,
+            'masks '
           ),
-          _react2.default.createElement(
+          this.props.match.params = "Fins" ? null : _react2.default.createElement(
             'div',
-            { className: 'card-content' },
-            _react2.default.createElement(
-              'div',
-              { className: 'media' },
-              _react2.default.createElement(
-                'div',
-                { className: 'media-content' },
-                _react2.default.createElement(
-                  'p',
-                  { className: 'title is-4' },
-                  categoryItem.brand
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              categoryItem.model
-            )
+            null,
+            'fins '
+          ),
+          this.props.match.params = "Tanks" ? null : _react2.default.createElement(
+            'div',
+            null,
+            'tanks '
           )
-        );
-      })
-    )
-  );
-};
+        )
+      );
+    }
+  }]);
+
+  return Compare;
+}(_react.Component);
 // based on category, must pull different data from db and set it to props / state.
 // must map out db data into boxes.
 //add checkbox / select state for comparing items
 //have function to show only those items that are viewed.
+/*something = somethin ? action to takeif correct*/
+//  can either turnerary mount component or render certain functions
+
+
 exports.default = Compare;
 
 /***/ }),
@@ -11488,10 +11490,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(29);
 
-var _catalogue = __webpack_require__(230);
-
-var _catalogue2 = _interopRequireDefault(_catalogue);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //way to link  each card to compare component
@@ -11507,7 +11505,7 @@ var categories = function categories(props) {
       _react2.default.createElement(
         'p',
         { className: 'info-box-p' },
-        'Choose one of the Classes Below to be taken to a page that shows a comparison between classes.'
+        'Choose which equipment class you would like to look at bellow.'
       )
     ),
     _react2.default.createElement(
@@ -26152,8 +26150,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var data = {
-    "fins": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }],
-    "masks": [{ "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Signle", "mask_volume": "Medium", "buckels": "Cervical joint" }, { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" }, { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }]
+    "Fins": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }],
+    "Masks": [{ "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Signle", "mask_volume": "Medium", "buckels": "Cervical joint" }, { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" }, { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }],
+    "Tanks": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }]
     // make = maker / brand
     // model = model specific name
     //
