@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import db from '../../public/dbs/db'
-import catalogue from '../catalogue'
+import Masks from './gear/Masks'
+import Fins from './gear/Fins'
+import Tanks from './gear/Tanks'
 
 class Compare extends Component {
-  
-  
+
+
   constructor(props) {
     super(props)
-    console.log(props)
-    this.state = {
-      catalogue: catalogue,
-    }
+    this.state = {}
+    console.log(props.match.params)
   }
+
 
   render() {
     return (
@@ -24,9 +24,9 @@ class Compare extends Component {
         <div className='category-items'>
           Place to mount items.
           <br />
-          {this.props.match.params = "Masks" ? null : <div>masks </div>}
-          {this.props.match.params = "Fins" ? null: <div>fins </div> }
-          {this.props.match.params = "Tanks" ? null : <div>tanks </div>}
+          {this.props.match.params.id = 'Masks' && <Masks />}
+          {this.props.match.params = 'Fins' && <Fins />}
+          {this.props.match.params = 'Tanks' && <Tanks />}
         </div>
       </div >
     )
@@ -36,6 +36,6 @@ class Compare extends Component {
 // must map out db data into boxes.
 //add checkbox / select state for comparing items
 //have function to show only those items that are viewed.
- /*something = somethin ? action to takeif correct*/
+/*something = somethin ? action to takeif correct*/
 //  can either turnerary mount component or render certain functions
 export default Compare
