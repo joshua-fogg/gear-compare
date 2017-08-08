@@ -13,9 +13,9 @@ class FinList extends Component {
 
   render() {
     return (
-      <div className='fins'>
-        {Fins.map((fin) =>
-          <div className='category-items'>
+      <div className='categories columns'>
+        {Fins.map((fin) => {
+          return (
             <div className='category card' key={fin.id} >
               <div className="card-image">
                 <figure className="image is-4by3">
@@ -25,20 +25,20 @@ class FinList extends Component {
               <div className="card-content">
                 <div className="media">
                   <div className="media-content">
-                    <p className="title is-4">{fin.brand} - {fin.model}</p>
+                    <p className="title is-4">Product Name</p>
                   </div>
                 </div>
                 <div className="content">
-                  {fin.buckels}
+                  Product Summary
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          )
+        })}
+
       </div >
     )
   }
 }
-
 
 export default FinList

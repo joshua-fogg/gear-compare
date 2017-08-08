@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-//way to link  each card to compare component
-
 const categories = (props) => {
   return (
     <div className='categories'>
@@ -35,7 +33,6 @@ const categories = (props) => {
                 </div>
               </Link>
             </div>
-
           )
         })}
       </div>
