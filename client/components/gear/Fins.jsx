@@ -18,7 +18,7 @@ class FinList extends Component {
           return (
             <div className='category card' key={fin.id} >
               <div className="card-image">
-                <figure className="image is-4by3">
+                <figure className="image">
                   <img src="http://via.placeholder.com/300x300" alt="Image" />
                 </figure>
               </div>

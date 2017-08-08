@@ -11732,7 +11732,7 @@ var FinList = function (_Component) {
               { className: 'card-image' },
               _react2.default.createElement(
                 'figure',
-                { className: 'image is-4by3' },
+                { className: 'image' },
                 _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
               )
             ),
