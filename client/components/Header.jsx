@@ -2,15 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-
   return (
     <div className='header'>
-      <div className='nav-bar-image'><img className='banner-img' src='/img/banner-top.jpg' /></div>
-      <div className='nav-bar'>
-        <Link to='/'          ><button>Home</button></Link>
-        <Link to='/categories'><button>Gear Categories</button></Link>
-        <Link to='/compare'   ><button>Compare</button></Link>
-        {/*redirect button to github*/}
+      <img className='banner-img center' src='/img/banner-top.jpg' />
+      <div className='link-bar'>
+        <div className='nav-links'><Link to='/' >Home</Link></div>
+        <div className='nav-links'><Link to='/categories'>Gear Categories</Link></div>
+        <div className='nav-links'><Link to='/compare' >Compare</Link></div>
+
+        {/* redirect button to github */}
       </div >
     </div >
   )

@@ -1,22 +1,25 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 import Masks from './gear/Masks'
 import Fins from './gear/Fins'
 import Tanks from './gear/Tanks'
 
 class Compare extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {}
   }
 
-  render() {
+  render () {
     return (
       <div className='compare'>
         {this.props.match.params.id === 'Masks' && <Masks />}
         {this.props.match.params.id === 'Fins' && <Fins />}
         {this.props.match.params.id === 'Tanks' && <Tanks />}
+        <div>
+          <br />
+          <br />
+        </div>
 
       </div >
     )

@@ -11416,8 +11416,6 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(17);
-
 var _Masks = __webpack_require__(104);
 
 var _Masks2 = _interopRequireDefault(_Masks);
@@ -11458,7 +11456,13 @@ var Compare = function (_Component) {
         { className: 'compare' },
         this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, null),
         this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, null),
-        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, null)
+        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, null),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null)
+        )
       );
     }
   }]);
@@ -11578,42 +11582,37 @@ var _reactRouterDom = __webpack_require__(17);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function Header() {
-
   return _react2.default.createElement(
     'div',
     { className: 'header' },
+    _react2.default.createElement('img', { className: 'banner-img center', src: '/img/banner-top.jpg' }),
     _react2.default.createElement(
       'div',
-      { className: 'nav-bar-image' },
-      _react2.default.createElement('img', { className: 'banner-img', src: '/img/banner-top.jpg' })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'nav-bar' },
+      { className: 'link-bar' },
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/' },
+        'div',
+        { className: 'nav-links' },
         _react2.default.createElement(
-          'button',
-          null,
+          _reactRouterDom.Link,
+          { to: '/' },
           'Home'
         )
       ),
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/categories' },
+        'div',
+        { className: 'nav-links' },
         _react2.default.createElement(
-          'button',
-          null,
+          _reactRouterDom.Link,
+          { to: '/categories' },
           'Gear Categories'
         )
       ),
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/compare' },
+        'div',
+        { className: 'nav-links' },
         _react2.default.createElement(
-          'button',
-          null,
+          _reactRouterDom.Link,
+          { to: '/compare' },
           'Compare'
         )
       )
