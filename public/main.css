@@ -1,18 +1,38 @@
-
-.navbar {
-    position: top;
-    color: white;
-    width: 100%;
-    height: 15%;
-    /*margin: 10%, 10%, 10%, 10%;*/
-    /*top, right, bottom, left*/
-    ;
+* {
+    /* font-family: 'Sedgwick Ave Display', cursive; */
+    font-family: 'Raleway', sans-serif;
 }
 
-.nav-bar-image {
-    padding-left: 25%;
+body {
+    background-image: url('/img/background.jpg');  
+    text-align:center;
+    height:auto;
+    width:auto;
+}
+.center {
+    display:inline-block;
+    height:auto;
+    width:auto;
+    margin: 0 auto;
 }
 
+.banner-img {
+  margin-top: 2%;
+}
+.link-bar{
+ display: inline-flex;
+ width: 100%;
+ padding-left: 9%;
+ padding-right:9%;
+
+  }
+.nav-links{
+width: auto;
+flex-grow: 1;
+border: 2px solid orange;
+background-color: black;
+color: white;
+}
 .header {
     margin-top: 5%;
 }
@@ -54,19 +74,13 @@
 }
 
 .home {
-    background: orange;
+    background: grey;
     color: black;
 }
 
 .cat-trap {
     width: 150px;
     height: 200px;
-}
-
-.banner-img {
-    width: 50%;
-    height: auto;
-    opacity: 1;
 }
 
 .container {
@@ -82,7 +96,7 @@
 }
 
 .sub-container {
-    background-color: orange;
+    background-color: grey;
     width: auto;
     height: auto;
 }
