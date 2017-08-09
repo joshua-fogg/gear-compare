@@ -6,10 +6,6 @@ import catalogue from '../../catalogue'
 const Tanks = catalogue.Tanks
 
 class TankList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
 
   render() {
 
