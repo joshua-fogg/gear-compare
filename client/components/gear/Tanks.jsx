@@ -15,8 +15,8 @@ class TankList extends Component {
     return (
       <div className='masks'>
         {Tanks.map((tank) =>
-          <div className='category-items'>
-            <div className='category card' key={tank.id} >
+          <div className='category-items'key={tank.id}>
+            <div className='category card'>
               <div className="card-image">
                 <figure className="image is-4by3">
                   <img src="http://via.placeholder.com/300x300" alt="Image" />

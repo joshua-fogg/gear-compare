@@ -13,23 +13,27 @@ class FinList extends Component {
 
   render() {
     return (
-      <div className='categories columns'>
+      <div className='column'>
         {Fins.map((fin) => {
           return (
-            <div className='category card' key={fin.id} >
+            <div className='columns card' key={fin.id} >
               <div className="card-image">
                 <figure className="image">
                   <img src="http://via.placeholder.com/300x300" alt="Image" />
                 </figure>
               </div>
               <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">Product Name</p>
-                  </div>
-                </div>
+                {/*<div className="media">*/}
+                  {/*<div className="media-content">*/}
+                    <p className="title is-4">{fin.brand}</p>
+                  {/*</div>*/}
+                {/*</div>*/}
                 <div className="content">
-                  Product Summary
+                  <p>{fin.make}</p>
+                  <p>{fin.model}</p>
+                  <p>{fin.heel_type}</p>
+                  <p>{fin.fin_type}</p>
+                  <p>{fin.colours}</p>
                 </div>
               </div>
             </div>

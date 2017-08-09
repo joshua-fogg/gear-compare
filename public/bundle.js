@@ -11747,11 +11747,11 @@ var FinList = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'categories columns' },
+        { className: 'column' },
         Fins.map(function (fin) {
           return _react2.default.createElement(
             'div',
-            { className: 'category card', key: fin.id },
+            { className: 'columns card', key: fin.id },
             _react2.default.createElement(
               'div',
               { className: 'card-image' },
@@ -11765,22 +11765,38 @@ var FinList = function (_Component) {
               'div',
               { className: 'card-content' },
               _react2.default.createElement(
-                'div',
-                { className: 'media' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'media-content' },
-                  _react2.default.createElement(
-                    'p',
-                    { className: 'title is-4' },
-                    'Product Name'
-                  )
-                )
+                'p',
+                { className: 'title is-4' },
+                fin.brand
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'content' },
-                'Product Summary'
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  fin.make
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  fin.model
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  fin.heel_type
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  fin.fin_type
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  fin.colours
+                )
               )
             )
           );
@@ -11980,10 +11996,10 @@ var TankList = function (_Component) {
         Tanks.map(function (tank) {
           return _react2.default.createElement(
             'div',
-            { className: 'category-items' },
+            { className: 'category-items', key: tank.id },
             _react2.default.createElement(
               'div',
-              { className: 'category card', key: tank.id },
+              { className: 'category card' },
               _react2.default.createElement(
                 'div',
                 { className: 'card-image' },
