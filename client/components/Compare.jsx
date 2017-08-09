@@ -15,7 +15,7 @@ class Compare extends Component {
     }
     this.setEquipment = this.setEquipment.bind(this)
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
-   this.setState = this.setState.bind(this)
+    this.setState = this.setState.bind(this)
   }
 
   setEquipment(equipmentID) {
@@ -38,9 +38,9 @@ class Compare extends Component {
   render() {
     return (
       <div className='compare'>
-        {this.props.match.params.id === 'Masks' && <Masks equip={this.setEquipment}  props={props} adjustState={this.setState}  />}
-        {this.props.match.params.id === 'Fins' && <Fins equip={this.setEquipment} props={props} adjustState={this.setState}  />}
-        {this.props.match.params.id === 'Tanks' && <Tanks equip={this.setEquipment} props={props} adjustState={this.setState}  />}
+        {this.props.match.params.id === 'Masks' && <Masks equip={this.setEquipment} adjustState={this.setState} />}
+        {this.props.match.params.id === 'Fins' && <Fins equip={this.setEquipment} adjustState={this.setState} />}
+        {this.props.match.params.id === 'Tanks' && <Tanks equip={this.setEquipment} adjustState={this.setState} />}
         <div>
           <br />
           <br />

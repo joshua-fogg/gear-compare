@@ -6,7 +6,7 @@ const data = {
             { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }
         ],
         "Masks": [
-            { "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Signle", "mask_volume": "Medium", "buckels": "Cervical joint" },
+            { "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Single", "mask_volume": "Medium", "buckels": "Cervical joint" },
             { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" },
             { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }
         ],

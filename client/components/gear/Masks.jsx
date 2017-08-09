@@ -15,8 +15,8 @@ class MaskList extends Component {
     return (
       <div className='masks'>
         {Masks.map((mask) =>
-          <div className='category-items'>
-            <div className='category card' key={mask.id} >
+          <div className="category-items" key={mask.id}>
+            <div className="category card">
               <div className="card-image">
                 <figure className="image is-4by3">
                   <img src="http://via.placeholder.com/300x300" alt="Image" />
@@ -29,10 +29,12 @@ class MaskList extends Component {
                   </div>
                 </div>
                 <div className="content">
-                 <p></p>
-                 <p></p>
-                 <p></p>
+                 <p>{mask.frame}</p>
+                 <p>{mask.lense}</p>
+                 <p>{mask.skirt}</p>
                  <p> {mask.buckels} </p>
+                 <p>{mask.mask_volume}</p>
+                 <p>{mask.lense_material}</p>
                 </div>
               </div>
             </div>

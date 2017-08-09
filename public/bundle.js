@@ -5027,7 +5027,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var data = {
     "Fins": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }],
-    "Masks": [{ "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Signle", "mask_volume": "Medium", "buckels": "Cervical joint" }, { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" }, { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }],
+    "Masks": [{ "id": 1, "model_id": "1azx-Aql", "lense": "Single", "frame": "Plastic", "lense_material": "Tempered", "skirt": "Single", "mask_volume": "Medium", "buckels": "Cervical joint" }, { "id": 2, "model_id": "2azy-mare", "lense": "Double", "frame": "Plastic", "lense_material": "Normal", "skirt": "Single", "mask_volume": "Low", "buckels": "Hard Buckel" }, { "id": 3, "model_id": "23a-apex", "lense": "Single", "frame": "Metal", "lense_material": "Plastic", "skirt": "Single", "mask_volume": "High", "buckels": "Cervical" }],
     "Tanks": [{ "id": 1, "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 2, "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" }, { "id": 3, "brand": "Oceanic", "model": "Power Thrust", "make": "Viper", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innvoative", "colours": "Black, Blue, Neon Yellow, Red, White/pink, White/Sea Blue" }, { "id": 4, "brand": "Mares", "model": null, "make": "X-Stream", "heel_type": "Quick Release", "fin_type": "Blade", "class": "Innovative", "colours": "Black, Blue, Pink, Red, White, Yellow" }]
     // make = maker / brand
     // model = model specific name
@@ -11480,9 +11480,9 @@ var Compare = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'compare' },
-        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: this.setEquipment, props: props, adjustState: this.setState }),
-        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equip: this.setEquipment, props: props, adjustState: this.setState }),
-        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equip: this.setEquipment, props: props, adjustState: this.setState }),
+        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: this.setEquipment, adjustState: this.setState }),
+        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equip: this.setEquipment, adjustState: this.setState }),
+        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equip: this.setEquipment, adjustState: this.setState }),
         _react2.default.createElement(
           'div',
           null,
@@ -11848,10 +11848,10 @@ var MaskList = function (_Component) {
         Masks.map(function (mask) {
           return _react2.default.createElement(
             'div',
-            { className: 'category-items' },
+            { className: 'category-items', key: mask.id },
             _react2.default.createElement(
               'div',
-              { className: 'category card', key: mask.id },
+              { className: 'category card' },
               _react2.default.createElement(
                 'div',
                 { className: 'card-image' },
@@ -11880,15 +11880,37 @@ var MaskList = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'content' },
-                  _react2.default.createElement('p', null),
-                  _react2.default.createElement('p', null),
-                  _react2.default.createElement('p', null),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    mask.frame
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    mask.lense
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    mask.skirt
+                  ),
                   _react2.default.createElement(
                     'p',
                     null,
                     ' ',
                     mask.buckels,
                     ' '
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    mask.mask_volume
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    mask.lense_material
                   )
                 )
               )
