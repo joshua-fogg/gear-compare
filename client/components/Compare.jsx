@@ -9,38 +9,42 @@ class Compare extends Component {
     super(props)
     this.state = {
       category: '',
-      activeEquipmentMasks: [],
-      activeEquipmentFins: [],
-      activeEquipmentTanks: [],
+      selectedMasks: [], //previously ActiveEquipmentMasks
+      selectedFins: [],
+      selectedTanks: [],
     }
-    this.setEquipment = this.setEquipment.bind(this)
+    // this.setEquipment = this.setEquipment.bind(this)
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
-    this.setState = this.setState.bind(this)
-  }
-
-  setEquipment(equipmentID) {
-    switch (props.category) {
-      case 'Masks':
-        this.state.activeEquipmentMasks.push(equipmentID)
-        break;
-      case 'Fins':
-        this.state.activeEquipmentFins.push(equipmentID)
-        break;
-      case 'Tanks':
-        this.state.activeEquipmentTanks.push(equipmentID)
-        break;
-      default:
-        console.log('default triggered')
-        break;
-    }
-  }
+    // this.setState = this.setState.bind(this)
+  } 
+ addFinsToStore(fin){
+   let selectedFins = this.state.selectedFins
+   selectedFins.push(fin)
+   this.setState({selectedFins: selectedFins})
+ }
+  // setEquipment(equipmentID) {
+  //   switch (props.category) {
+  //     case 'Masks':
+  //       this.state.activeEquipmentMasks.push(equipmentID)
+  //       break;
+  //     case 'Fins':
+  //       this.state.activeEquipmentFins.push(equipmentID)
+  //       break;
+  //     case 'Tanks':
+  //       this.state.activeEquipmentTanks.push(equipmentID)
+  //       break;
+  //     default:
+  //       console.log('default triggered')
+  //       break;
+  //   }
+  // }
 
   render() {
     return (
       <div className='compare'>
-        {this.props.match.params.id === 'Masks' && <Masks equip={this.setEquipment} adjustState={this.setState} />}
-        {this.props.match.params.id === 'Fins' && <Fins equip={this.setEquipment} adjustState={this.setState} />}
-        {this.props.match.params.id === 'Tanks' && <Tanks equip={this.setEquipment} adjustState={this.setState} />}
+        {this.props.match.params.id === 'Masks' && <Masks />}
+        {this.props.match.params.id === 'Fins' && <Fins equipFin={this.addFinsToStore} selectedFins={this.setState} />}
+        {this.props.match.params.id === 'Tanks' && <Tanks />}
         <div>
           <br />
           <br />
