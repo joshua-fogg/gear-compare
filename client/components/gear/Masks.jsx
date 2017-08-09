@@ -9,13 +9,14 @@ class MaskList extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+    console.log(props)
   }
 
-  render() {
+  render(props) {
     return (
       <div className='masks'>
         {Masks.map((mask) =>
-          <div className="category-items" key={mask.id}>
+          <div className="category-items" key={mask.id} onClick={(e)=>{props.equip(e.target.key)}}>
             <div className="category card">
               <div className="card-image">
                 <figure className="image is-4by3">

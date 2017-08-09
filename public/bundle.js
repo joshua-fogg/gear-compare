@@ -11852,19 +11852,22 @@ var MaskList = function (_Component) {
     var _this = _possibleConstructorReturn(this, (MaskList.__proto__ || Object.getPrototypeOf(MaskList)).call(this, props));
 
     _this.state = {};
+    console.log(props);
     return _this;
   }
 
   _createClass(MaskList, [{
     key: 'render',
-    value: function render() {
+    value: function render(props) {
       return _react2.default.createElement(
         'div',
         { className: 'masks' },
         Masks.map(function (mask) {
           return _react2.default.createElement(
             'div',
-            { className: 'category-items', key: mask.id },
+            { className: 'category-items', key: mask.id, onClick: function onClick(e) {
+                props.equip(e.target.key);
+              } },
             _react2.default.createElement(
               'div',
               { className: 'category card' },
