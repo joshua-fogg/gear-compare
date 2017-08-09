@@ -13,28 +13,31 @@ class Compare extends Component {
       activeEquipmentFins: [],
       activeEquipmentTanks: [],
     }
-    this.setActiveEquipment = this.setActiveEquipment.bind(this)
+    this.setEquipment = this.setEquipment.bind(this)
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
     //this
   }
-  setActiveEquipment(id) {
-   switch(props.category){
-   case 'Masks':
-   break;
-   case 'Fins':
-   break;
-   case 'Tanks':
-   break;
-   default:
-   break;
-
-   }
+  setEquipment(equipmentID) {
+    switch (props.category) {
+      case 'Masks':
+        this.state.activeEquipmentMasks.push(equipmentID)
+        break;
+      case 'Fins':
+        this.state.activeEquipmentFins.push(equipmentID)
+        break;
+      case 'Tanks':
+        this.state.activeEquipmentTanks.push(equipmentID)
+        break;
+      default:
+        console.log('default triggered')
+        break;
+    }
   }
 
   render() {
     return (
       <div className='compare'>
-        {this.props.match.params.id === 'Masks' && <Masks />}
+        {this.props.match.params.id === 'Masks' && <Masks equip={setActiveEquipment} />}
         {this.props.match.params.id === 'Fins' && <Fins />}
         {this.props.match.params.id === 'Tanks' && <Tanks />}
         <div>

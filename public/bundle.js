@@ -11450,25 +11450,28 @@ var Compare = function (_Component) {
       activeEquipmentFins: [],
       activeEquipmentTanks: []
     };
-    _this.setActiveEquipment = _this.setActiveEquipment.bind(_this);
+    _this.setEquipment = _this.setEquipment.bind(_this);
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
     //this
     return _this;
   }
 
   _createClass(Compare, [{
-    key: 'setActiveEquipment',
-    value: function setActiveEquipment(id) {
+    key: 'setEquipment',
+    value: function setEquipment(equipmentID) {
       switch (props.category) {
         case 'Masks':
+          this.state.activeEquipmentMasks.push(equipmentID);
           break;
         case 'Fins':
+          this.state.activeEquipmentFins.push(equipmentID);
           break;
         case 'Tanks':
+          this.state.activeEquipmentTanks.push(equipmentID);
           break;
         default:
+          console.log('default triggered');
           break;
-
       }
     }
   }, {
@@ -11477,7 +11480,7 @@ var Compare = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'compare' },
-        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, null),
+        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: setActiveEquipment }),
         this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, null),
         this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, null),
         _react2.default.createElement(
