@@ -11452,7 +11452,7 @@ var Compare = function (_Component) {
     };
     _this.setEquipment = _this.setEquipment.bind(_this);
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
-    //this
+    _this.setState = _this.setState.bind(_this);
     return _this;
   }
 
@@ -11480,9 +11480,9 @@ var Compare = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'compare' },
-        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: this.setEquipment }),
-        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equip: this.setEquipment }),
-        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equip: this.setEquipment }),
+        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: this.setEquipment, props: props, adjustState: this.setState }),
+        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equip: this.setEquipment, props: props, adjustState: this.setState }),
+        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equip: this.setEquipment, props: props, adjustState: this.setState }),
         _react2.default.createElement(
           'div',
           null,
@@ -11880,7 +11880,16 @@ var MaskList = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'content' },
-                  mask.buckels
+                  _react2.default.createElement('p', null),
+                  _react2.default.createElement('p', null),
+                  _react2.default.createElement('p', null),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    ' ',
+                    mask.buckels,
+                    ' '
+                  )
                 )
               )
             )

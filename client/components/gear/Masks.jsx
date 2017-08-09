@@ -29,7 +29,10 @@ class MaskList extends Component {
                   </div>
                 </div>
                 <div className="content">
-                  {mask.buckels}
+                 <p></p>
+                 <p></p>
+                 <p></p>
+                 <p> {mask.buckels} </p>
                 </div>
               </div>
             </div>
