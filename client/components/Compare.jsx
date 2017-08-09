@@ -8,26 +8,27 @@ class Compare extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      category: '',
       activeEquipmentMasks: [],
       activeEquipmentFins: [],
       activeEquipmentTanks: [],
     }
     this.setActiveEquipment = this.setActiveEquipment.bind(this)
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
+    //this
   }
-  setActiveEquipment(category, id) {
-    if (category === 'Mask') {
+  setActiveEquipment(id) {
+   switch(props.category){
+   case 'Masks':
+   break;
+   case 'Fins':
+   break;
+   case 'Tanks':
+   break;
+   default:
+   break;
 
-    }else if (category === 'Fins') {
-
-    }else if(category === 'Tank') {
-
-     }
-
-    // pushActiveEquipment(){
-    //   return
-    // }
-
+   }
   }
 
   render() {

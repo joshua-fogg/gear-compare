@@ -11445,23 +11445,31 @@ var Compare = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Compare.__proto__ || Object.getPrototypeOf(Compare)).call(this, props));
 
     _this.state = {
+      category: '',
       activeEquipmentMasks: [],
       activeEquipmentFins: [],
       activeEquipmentTanks: []
     };
     _this.setActiveEquipment = _this.setActiveEquipment.bind(_this);
     // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
+    //this
     return _this;
   }
 
   _createClass(Compare, [{
     key: 'setActiveEquipment',
-    value: function setActiveEquipment(category, id) {
-      if (category === 'Mask') {} else if (category === 'Fins') {} else if (category === 'Tank') {}
+    value: function setActiveEquipment(id) {
+      switch (props.category) {
+        case 'Masks':
+          break;
+        case 'Fins':
+          break;
+        case 'Tanks':
+          break;
+        default:
+          break;
 
-      // pushActiveEquipment(){
-      //   return
-      // }
+      }
     }
   }, {
     key: 'render',
