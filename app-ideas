@@ -5,6 +5,20 @@ Gear Class Page: navBar top, use animation / nice background-pic , intro-box: se
 Gear compare: items and traits to compare, basic features, technical features, hover box showing each traits usefullness
 
 
+
+
+Todo:
+- onclick cycles:
+    - change state in compare page to include id of equipment
+    - include remove 
+    - 
+- map state array to publish data onot a comparison table
+- get images for equipment
+- 
+
+
+
+
 /*Gear class-types: info page for
 
 Mask features:
