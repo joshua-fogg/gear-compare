@@ -9,6 +9,14 @@ body {
     height:auto;
     width:auto;
 }
+.external-link-bar{
+    color: blue;
+    background-color: ;
+    padding-bottom: 100px; 
+}
+.footer{
+    background-color:inherit;
+}
 .center {
     display:inline-block;
     height:auto;

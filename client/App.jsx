@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Categories from './components/EquipmentCategories'
 import Compare from './components/Compare'
+import Footer from './components/Footer'
 
 class App extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Route path='/compare/:id' render={(props) => (
               <Compare {...props}/>
             )} />
+            <Footer />
           </div>
         </div>
       </Router>

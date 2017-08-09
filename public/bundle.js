@@ -11341,6 +11341,10 @@ var _Compare = __webpack_require__(99);
 
 var _Compare2 = _interopRequireDefault(_Compare);
 
+var _Footer = __webpack_require__(233);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11387,7 +11391,8 @@ var App = function (_React$Component) {
               } }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/compare/:id', render: function render(props) {
                 return _react2.default.createElement(_Compare2.default, props);
-              } })
+              } }),
+            _react2.default.createElement(_Footer2.default, null)
           )
         )
       );
@@ -11685,7 +11690,7 @@ var Home = function Home() {
         _reactRouterDom.Link,
         { to: '/categories/' },
         _react2.default.createElement(
-          'button',
+          'div',
           null,
           'Click to dive into equipment categories '
         ),
@@ -26487,6 +26492,64 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+    return _react2.default.createElement(
+        'div',
+        { className: 'footer' },
+        _react2.default.createElement(
+            'div',
+            { className: 'external-link-bar' },
+            _react2.default.createElement(
+                'div',
+                { className: 'nav-links' },
+                _react2.default.createElement(
+                    'a',
+                    { href: 'https://www.github.com/joshua-fogg' },
+                    'github'
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'nav-links' },
+                _react2.default.createElement(
+                    'a',
+                    { href: 'https://fogg.tech' },
+                    'Fogg'
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'nav-links' },
+                _react2.default.createElement(
+                    'a',
+                    { href: 'https://joshua-fogg.github.io' },
+                    'Website'
+                )
+            )
+        )
+    );
+};
+exports.default = Header;
 
 /***/ })
 /******/ ]);

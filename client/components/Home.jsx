@@ -12,7 +12,7 @@ const Home = () => {
       <div className='space-filler'>
       </div>
       <div className='button-container'>
-        <Link to={'/categories/'}><button >Click to dive into equipment categories </button> </Link>
+        <Link to={'/categories/'}><div >Click to dive into equipment categories </div> </Link>
         <div className='space-filler'>
         </div>
       </div>
