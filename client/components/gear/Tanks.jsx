@@ -8,13 +8,12 @@ const Tanks = catalogue.Tanks
 class TankList extends Component {
 
   render() {
-
     return (
       <div className='masks'>
         {Tanks.map((tank) => {
           const isSelected = this.props.selectedMasks.includes(tank.id)
           return (
-            <div className={classNames('category-items', {active:isSelected})} key={tank.id}>
+            <div className={classNames('category-items', { active: isSelected })} key={tank.id}>
               <div className='category card'>
                 <div className="card-image">
                   <figure className="image is-4by3">
@@ -29,12 +28,12 @@ class TankList extends Component {
                   </div>
                   <div className="content">
                     Tank Something here
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
           )
-        }
+        })
         }
       </div >
     )

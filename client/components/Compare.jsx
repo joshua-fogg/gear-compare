@@ -13,11 +13,11 @@ class Compare extends Component {
       selectedFins: [],
       selectedTanks: [],
     }
-    this.addFinsToStore = this.addFinsToStore.bind(this)
-    this.addMasksToStore = this.addMasksToStore.bind(this)
-    this.addTanksToStore = this.addTanksToStore.bind(this)
-
+    this.addFinToStore = this.addFinToStore.bind(this)
+    this.addMaskToStore = this.addMaskToStore.bind(this)
+    this.addTankToStore = this.addTankToStore.bind(this)
   }
+  
   addFinToStore(fin) {
     let selectedFins = [...this.state.selectedFins]
     //'...' makes state immutable

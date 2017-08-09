@@ -11457,10 +11457,9 @@ var Compare = function (_Component) {
       selectedFins: [],
       selectedTanks: []
     };
-    _this.addFinsToStore = _this.addFinsToStore.bind(_this);
-    _this.addMasksToStore = _this.addMasksToStore.bind(_this);
-    _this.addTanksToStore = _this.addTanksToStore.bind(_this);
-
+    _this.addFinToStore = _this.addFinToStore.bind(_this);
+    _this.addMaskToStore = _this.addMaskToStore.bind(_this);
+    _this.addTankToStore = _this.addTankToStore.bind(_this);
     return _this;
   }
 
@@ -12021,9 +12020,104 @@ exports.default = MaskList;
 
 /***/ }),
 /* 106 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token, expected , (38:8)\n\n\u001b[0m \u001b[90m 36 | \u001b[39m          )\n \u001b[90m 37 | \u001b[39m        }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 | \u001b[39m        }\n \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m \u001b[33m>\u001b[39m\n \u001b[90m 40 | \u001b[39m    )\n \u001b[90m 41 | \u001b[39m  }\u001b[0m\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(17);
+
+var _catalogue = __webpack_require__(39);
+
+var _catalogue2 = _interopRequireDefault(_catalogue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Tanks = _catalogue2.default.Tanks;
+
+var TankList = function (_Component) {
+  _inherits(TankList, _Component);
+
+  function TankList() {
+    _classCallCheck(this, TankList);
+
+    return _possibleConstructorReturn(this, (TankList.__proto__ || Object.getPrototypeOf(TankList)).apply(this, arguments));
+  }
+
+  _createClass(TankList, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'masks' },
+        Tanks.map(function (tank) {
+          var isSelected = _this2.props.selectedMasks.includes(tank.id);
+          return _react2.default.createElement(
+            'div',
+            { className: classNames('category-items', { active: isSelected }), key: tank.id },
+            _react2.default.createElement(
+              'div',
+              { className: 'category card' },
+              _react2.default.createElement(
+                'div',
+                { className: 'card-image' },
+                _react2.default.createElement(
+                  'figure',
+                  { className: 'image is-4by3' },
+                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x300', alt: 'Image' })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'card-content' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'media' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'media-content' },
+                    _react2.default.createElement(
+                      'p',
+                      { className: 'title is-4' },
+                      'Tank Model ID'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'content' },
+                  'Tank Something here'
+                )
+              )
+            )
+          );
+        })
+      );
+    }
+  }]);
+
+  return TankList;
+}(_react.Component);
+
+exports.default = TankList;
 
 /***/ }),
 /* 107 */
