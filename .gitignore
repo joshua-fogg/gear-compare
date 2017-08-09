@@ -57,5 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
-**/bundle.js.map
-**/bundle.js
+node_modules
+/public/bundle*
+

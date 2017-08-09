@@ -5,12 +5,32 @@ import Fins from './gear/Fins'
 import Tanks from './gear/Tanks'
 
 class Compare extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      activeEquipmentMasks: [],
+      activeEquipmentFins: [],
+      activeEquipmentTanks: [],
+    }
+    this.setActiveEquipment = this.setActiveEquipment.bind(this)
+    // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
+  }
+  setActiveEquipment(category, id) {
+    if (category === 'Mask') {
+
+    }else if (category === 'Fins') {
+
+    }else if(category === 'Tank') {
+
+     }
+
+    // pushActiveEquipment(){
+    //   return
+    // }
+
   }
 
-  render () {
+  render() {
     return (
       <div className='compare'>
         {this.props.match.params.id === 'Masks' && <Masks />}
