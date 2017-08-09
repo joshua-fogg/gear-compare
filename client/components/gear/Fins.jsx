@@ -7,11 +7,6 @@ import catalogue from '../../catalogue'
 const Fins = catalogue.Fins
 
 class FinList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-    console.log(props)
-  }
   
   render() {
     return (

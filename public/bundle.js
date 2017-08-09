@@ -11805,14 +11805,10 @@ var Fins = _catalogue2.default.Fins;
 var FinList = function (_Component) {
   _inherits(FinList, _Component);
 
-  function FinList(props) {
+  function FinList() {
     _classCallCheck(this, FinList);
 
-    var _this = _possibleConstructorReturn(this, (FinList.__proto__ || Object.getPrototypeOf(FinList)).call(this, props));
-
-    _this.state = {};
-    console.log(props);
-    return _this;
+    return _possibleConstructorReturn(this, (FinList.__proto__ || Object.getPrototypeOf(FinList)).apply(this, arguments));
   }
 
   _createClass(FinList, [{
