@@ -13,38 +13,33 @@ class Compare extends Component {
       selectedFins: [],
       selectedTanks: [],
     }
-    // this.setEquipment = this.setEquipment.bind(this)
-    // this.removeActiveEquipment = this.removeActiveEquipment.bind(this)
-    // this.setState = this.setState.bind(this)
+    this.addFinsToStore = this.addFinsToStore.bind(this)
+    this.addMasksToStore = this.addMasksToStore.bind(this)
+    this.addTanksToStore = this.addTanksToStore.bind(this)
+
   } 
- addFinsToStore(fin){
-   let selectedFins = this.state.selectedFins
-   selectedFins.push(fin)
-   this.setState({selectedFins: selectedFins})
+ addFinToStore(fin){
+   let selectedFins = [...this.state.selectedFins] //'...' makes state immutable
+   selectedFins.push(fin)                          // addes new id to array
+   this.setState({selectedFins: selectedFins})     //sets new array to state
  }
-  // setEquipment(equipmentID) {
-  //   switch (props.category) {
-  //     case 'Masks':
-  //       this.state.activeEquipmentMasks.push(equipmentID)
-  //       break;
-  //     case 'Fins':
-  //       this.state.activeEquipmentFins.push(equipmentID)
-  //       break;
-  //     case 'Tanks':
-  //       this.state.activeEquipmentTanks.push(equipmentID)
-  //       break;
-  //     default:
-  //       console.log('default triggered')
-  //       break;
-  //   }
-  // }
+addMaskToStore(mask){
+   let selectedMasks = [...this.state.selectedMasks] 
+   selectedMasks.push(mask)
+   this.setState({selectedMasks: selectedMasks})
+ }
+ addTankToStore(tank){
+   let selectedTanks = [...this.state.selectedTanks]
+   selectedTanks.push(tank)
+   this.setState({selectedTanks: selectedTanks})
+ }
 
   render() {
     return (
       <div className='compare'>
-        {this.props.match.params.id === 'Masks' && <Masks />}
-        {this.props.match.params.id === 'Fins' && <Fins equipFin={this.addFinsToStore} selectedFins={this.setState} />}
-        {this.props.match.params.id === 'Tanks' && <Tanks />}
+        {this.props.match.params.id === 'Masks' && <Masks equipMask={this.addMaskToStore} selectedMask={this.state.selectedMasks}/>}
+        {this.props.match.params.id === 'Fins' && <Fins equipFin={this.addFinToStore} selectedFins={this.state.selectedFins} />}
+        {this.props.match.params.id === 'Tanks' && <Tanks equipTank={this.addTankToStore} selectedTanks={this.state.selectedTanks}/>}
         <div>
           <br />
           <br />
@@ -57,3 +52,4 @@ class Compare extends Component {
 export default Compare
 
 //add ins: have buttons on bottom of page for equipment categories?
+//change ID'd to be unique / class specific 

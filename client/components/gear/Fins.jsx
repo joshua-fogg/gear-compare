@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import classNames from 'classnames'
 
 import catalogue from '../../catalogue'
 
@@ -9,25 +10,23 @@ class FinList extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+    console.log(props)
   }
-
+  
   render() {
     return (
       <div className='column'>
         {Fins.map((fin) => {
+          const isSelected = this.props.selectedFins.includes(fin.id)
           return (
-            <div className='columns card' key={fin.id} >
+            <div className={classNames('columns card', {active:isSelected})} key={fin.id} onClick={(e)=>{this.props.equipFin(fin.id)}}>
               <div className="card-image">
                 <figure className="image">
                   <img src="http://via.placeholder.com/300x300" alt="Image" />
                 </figure>
               </div>
               <div className="card-content">
-                {/*<div className="media">*/}
-                  {/*<div className="media-content">*/}
                     <p className="title is-4">{fin.brand}</p>
-                  {/*</div>*/}
-                {/*</div>*/}
                 <div className="content">
                   <p>{fin.make}</p>
                   <p>{fin.model}</p>
@@ -39,7 +38,6 @@ class FinList extends Component {
             </div>
           )
         })}
-
       </div >
     )
   }
