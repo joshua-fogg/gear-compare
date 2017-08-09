@@ -11480,9 +11480,9 @@ var Compare = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'compare' },
-        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: setActiveEquipment }),
-        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, null),
-        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, null),
+        this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equip: this.setEquipment }),
+        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equip: this.setEquipment }),
+        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equip: this.setEquipment }),
         _react2.default.createElement(
           'div',
           null,
