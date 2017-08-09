@@ -49,7 +49,6 @@ class Compare extends Component {
           <br />
           <br />
         </div>
-
       </div >
     )
   }
@@ -57,9 +56,4 @@ class Compare extends Component {
 
 export default Compare
 
-// based on category, must pull different data from db and set it to props / state.
-// must map out db data into boxes.
-// add checkbox / select state for comparing items
-// have function to show only those items that are viewed.
-/* something = somethin ? action to takeif correct */
-//  can either turnerary mount component or render certain functions
+//add ins: have buttons on bottom of page for equipment categories?
