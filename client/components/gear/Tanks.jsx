@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import classNames from 'classnames'
 
 import catalogue from '../../catalogue'
 
@@ -11,7 +12,7 @@ class TankList extends Component {
     return (
       <div className='masks'>
         {Tanks.map((tank) => {
-          const isSelected = this.props.selectedMasks.includes(tank.id)
+          const isSelected = this.props.selectedTanks.includes(tank.id)
           return (
             <div className={classNames('category-items', { active: isSelected })} key={tank.id}>
               <div className='category card'>
@@ -27,7 +28,8 @@ class TankList extends Component {
                     </div>
                   </div>
                   <div className="content">
-                    Tank Something here
+                    Tanks You for comming
+                    Sea you again soon
                   </div>
                 </div>
               </div>

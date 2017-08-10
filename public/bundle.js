@@ -11902,6 +11902,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(17);
 
+var _classnames = __webpack_require__(108);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _catalogue = __webpack_require__(39);
 
 var _catalogue2 = _interopRequireDefault(_catalogue);
@@ -11919,27 +11923,26 @@ var Masks = _catalogue2.default.Masks;
 var MaskList = function (_Component) {
   _inherits(MaskList, _Component);
 
-  function MaskList(props) {
+  function MaskList() {
     _classCallCheck(this, MaskList);
 
-    var _this = _possibleConstructorReturn(this, (MaskList.__proto__ || Object.getPrototypeOf(MaskList)).call(this, props));
-
-    _this.state = {};
-    console.log(props);
-    return _this;
+    return _possibleConstructorReturn(this, (MaskList.__proto__ || Object.getPrototypeOf(MaskList)).apply(this, arguments));
   }
 
   _createClass(MaskList, [{
     key: 'render',
     value: function render(props) {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'div',
         { className: 'masks' },
         Masks.map(function (mask) {
+          var isSelected = _this2.props.selectedMask.includes(mask.id);
           return _react2.default.createElement(
             'div',
-            { className: 'category-items', key: mask.id, onClick: function onClick(e) {
-                props.equip(e.target.key);
+            { className: (0, _classnames2.default)('category-items', { active: isSelected }), key: mask.id, onClick: function onClick(e) {
+                _this2.props.equipMask(mask.id);
               } },
             _react2.default.createElement(
               'div',
@@ -12037,6 +12040,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(17);
 
+var _classnames = __webpack_require__(108);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _catalogue = __webpack_require__(39);
 
 var _catalogue2 = _interopRequireDefault(_catalogue);
@@ -12069,10 +12076,10 @@ var TankList = function (_Component) {
         'div',
         { className: 'masks' },
         Tanks.map(function (tank) {
-          var isSelected = _this2.props.selectedMasks.includes(tank.id);
+          var isSelected = _this2.props.selectedTanks.includes(tank.id);
           return _react2.default.createElement(
             'div',
-            { className: classNames('category-items', { active: isSelected }), key: tank.id },
+            { className: (0, _classnames2.default)('category-items', { active: isSelected }), key: tank.id },
             _react2.default.createElement(
               'div',
               { className: 'category card' },
@@ -12104,7 +12111,7 @@ var TankList = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'content' },
-                  'Tank Something here'
+                  'Tanks You for comming Sea you again soon'
                 )
               )
             )

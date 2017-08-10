@@ -9,6 +9,9 @@ body {
     height:auto;
     width:auto;
 }
+.active{
+    border: 2px solid blue;
+}
 .external-link-bar{
     color: blue;
     background-color: ;
