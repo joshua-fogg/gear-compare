@@ -16,8 +16,15 @@ class Compare extends Component {
     this.addFinToStore = this.addFinToStore.bind(this)
     this.addMaskToStore = this.addMaskToStore.bind(this)
     this.addTankToStore = this.addTankToStore.bind(this)
+    this.removeFinFromStore = this.removeFinFromStore.bind(this)
   }
-  
+
+  removeFromState(equipmenttype, Id) {
+    let adjustedFins = [...this.state.selectedFins].filter(function (fin) {
+      return fin != finId;
+    })
+  }
+
   addFinToStore(fin) {
     let selectedFins = [...this.state.selectedFins]
     //'...' makes state immutable
@@ -43,8 +50,8 @@ class Compare extends Component {
     return (
       <div className='compare'>
         {this.props.match.params.id === 'Masks' && <Masks equipMask={this.addMaskToStore} selectedMask={this.state.selectedMasks} />}
-        {this.props.match.params.id === 'Fins' && <Fins equipFin={this.addFinToStore} selectedFins={this.state.selectedFins} />}
-        {this.props.match.params.id === 'Tanks' && <Tanks equipTank={this.addTankToStore} selectedTanks={this.state.selectedTanks} />}
+        {this.props.match.params.id === 'Fins' && <Fins equipFin={this.state.addFinToStore} selectedFins={this.state.selectedFins} removeFin={this.state.removeFinFromStore} />}
+        {this.props.match.params.id === 'Tanks' && <Tanks equipTank={this.state.addTankToStore} selectedTanks={this.state.selectedTanks} />}
         <div>
           <br />
           <br />
@@ -58,3 +65,4 @@ export default Compare
 
 //add ins: have buttons on bottom of page for equipment categories?
 //change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
+//turn each state changer into a toggler function

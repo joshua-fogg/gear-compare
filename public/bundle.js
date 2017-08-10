@@ -11460,10 +11460,18 @@ var Compare = function (_Component) {
     _this.addFinToStore = _this.addFinToStore.bind(_this);
     _this.addMaskToStore = _this.addMaskToStore.bind(_this);
     _this.addTankToStore = _this.addTankToStore.bind(_this);
+    _this.removeFinFromStore = _this.removeFinFromStore.bind(_this);
     return _this;
   }
 
   _createClass(Compare, [{
+    key: 'removeFromState',
+    value: function removeFromState(equipmenttype, Id) {
+      var adjustedFins = [].concat(_toConsumableArray(this.state.selectedFins)).filter(function (fin) {
+        return fin != finId;
+      });
+    }
+  }, {
     key: 'addFinToStore',
     value: function addFinToStore(fin) {
       var selectedFins = [].concat(_toConsumableArray(this.state.selectedFins));
@@ -11494,8 +11502,8 @@ var Compare = function (_Component) {
         'div',
         { className: 'compare' },
         this.props.match.params.id === 'Masks' && _react2.default.createElement(_Masks2.default, { equipMask: this.addMaskToStore, selectedMask: this.state.selectedMasks }),
-        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equipFin: this.addFinToStore, selectedFins: this.state.selectedFins }),
-        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equipTank: this.addTankToStore, selectedTanks: this.state.selectedTanks }),
+        this.props.match.params.id === 'Fins' && _react2.default.createElement(_Fins2.default, { equipFin: this.state.addFinToStore, selectedFins: this.state.selectedFins, removeFin: this.state.removeFinFromStore }),
+        this.props.match.params.id === 'Tanks' && _react2.default.createElement(_Tanks2.default, { equipTank: this.state.addTankToStore, selectedTanks: this.state.selectedTanks }),
         _react2.default.createElement(
           'div',
           null,
@@ -11513,6 +11521,7 @@ exports.default = Compare;
 
 //add ins: have buttons on bottom of page for equipment categories?
 //change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
+//turn each state changer into a toggler function
 
 /***/ }),
 /* 100 */
