@@ -12,19 +12,23 @@ class Compare extends Component {
       selectedEquipment: [], //active Equipment
     }
     this.addToStore = this.addToStore.bind(this)
-    this.removeFromStore = this.removeFromStore.bind(this)
-  }
-  addToStore(EId) {
-    let selectedEQ = [...this.state.selectedEquipment]
-    selectedEQ.push(EId)  // addes new id to array
-    this.setState({ selectedEquipment: selectedEQ }) //sets new array to state 
+    // this.removeFromStore = this.removeFromStore.bind(this)
   }
 
-  removeFromStore(EId) {
-    let equipmentList = [...this.state.selectedEquipment].filter(function (equipment) {
-      return equipment != EId;
-    })
+  toggleToStore(EId) {
+    let selectedEQ = [...this.state.selectedEquipment]
+    // if(selectedEQ.includes(EId)) return ---> assesses if present
+    if(selectedEQ.includes(EId)) return
+    selectedEQ.push(EId)
+    this.setState({ selectedEquipment: selectedEQ })
   }
+
+  // removeFromStore(EId) {
+  //   let equipmentList = [...this.state.selectedEquipment].filter((equipment) => {
+  //     return equipment != EId;
+  //   })
+  //   this.setState({selectedEquipment: equipmentList})
+  // }
 
 
   render() {
@@ -33,17 +37,17 @@ class Compare extends Component {
         {this.props.match.params.id === 'Masks' && <Masks
           equip={this.addToStore}
           selected={this.state.selectedEquipment}
-          removeEQ={this.removeFromStore}
+          unequip={this.removeFromStore}
         />}
         {this.props.match.params.id === 'Fins' && <Fins
           equip={this.addToStore}
           selected={this.state.selectedEquipment}
-          removeEQ={this.removeFromStore}
+          unequip={this.removeFromStore}
         />}
         {this.props.match.params.id === 'Tanks' && <Tanks
           equip={this.addToStore}
           selected={this.state.selectedEquipment}
-          removeEQ={this.removeFromStore}
+          unequip={this.removeFromStore}
         />}
         <div>
           <br />
