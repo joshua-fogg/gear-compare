@@ -6,9 +6,20 @@
 body {
     background-image: url('/img/background.jpg');  
     text-align:center;
-    height:auto;
-    width:auto;
+    background-position:50% 50%;  /* Sets reference point to scale from */
+    background-size:cover;        /* Sets background image to cover entire element */
 }
+
+/*------Parental Container------*/
+#root{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/*------Parental Container------*/
+
+
+
+
 .active{
     border: 2px solid blue;
 }
