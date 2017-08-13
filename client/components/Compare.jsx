@@ -40,9 +40,21 @@ class Compare extends Component {
   render() {
     return (
       <div className='compare'>
-        {this.props.match.params.id === 'Masks' && <Masks equipMask={this.addMaskToStore} selectedMask={this.state.selectedMasks} />}
-        {this.props.match.params.id === 'Fins' && <Fins equipFin={this.state.addFinToStore} selectedFins={this.state.selectedFins} removeFin={this.state.removeFinFromStore} />}
-        {this.props.match.params.id === 'Tanks' && <Tanks equipTank={this.state.addTankToStore} selectedTanks={this.state.selectedTanks} />}
+        {this.props.match.params.id === 'Masks' && <Masks 
+                                                    equipEQ={this.addToStore} 
+                                                    selectedEQ={this.state.selectedMasks} 
+                                                    removeEQ={this.state.removeFinFromStore}
+                                                    />}
+        {this.props.match.params.id === 'Fins' && <Fins 
+                                                    equipEQ={this.state.addToStore} 
+                                                    selectedEQ={this.state.selectedFins}
+                                                    removeEQ={this.state.removeFinFromStore} 
+                                                    />}
+        {this.props.match.params.id === 'Tanks' && <Tanks 
+                                                    equipEQ={this.state.addToStore} 
+                                                    selectedEQ={this.state.selectedTanks}
+                                                    removeEQ={this.state.removeFinFromStore} 
+                                                    />}
         <div>
           <br />
           <br />
