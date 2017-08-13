@@ -12,7 +12,7 @@ class FinList extends Component {
     return (
       <div className='column'>
         {Fins.map((fin) => {
-          const isSelected = this.props.selectedEQ.includes(fin.id)
+          const isSelected = this.props.selected.includes(fin.id)
           return (
             <div className={classNames('columns card', {active:isSelected})} key={fin.id} onClick={(e)=>{this.props.equip(fin.id)}}>
               <div className="card-image">
