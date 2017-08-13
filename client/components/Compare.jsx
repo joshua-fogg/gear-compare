@@ -11,15 +11,20 @@ class Compare extends Component {
       category: '',
       selectedEquipment: [], //active Equipment
     }
-    this.addToStore = this.addToStore.bind(this)
+    this.addToStore = this.toggleToStore.bind(this)
     // this.removeFromStore = this.removeFromStore.bind(this)
   }
 
   toggleToStore(EId) {
     let selectedEQ = [...this.state.selectedEquipment]
-    // if(selectedEQ.includes(EId)) return ---> assesses if present
-    if(selectedEQ.includes(EId)) return
-    selectedEQ.push(EId)
+    if (selectedEQ.includes(EId)) {
+      // let selectedEQ = selectedEQ.filter(function(id){
+         return  // EId!==id
+      })
+      return
+    } else {
+      selectedEQ.push(EId)
+    }
     this.setState({ selectedEquipment: selectedEQ })
   }
 
