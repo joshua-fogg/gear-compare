@@ -9,42 +9,30 @@ class Compare extends Component {
     super(props)
     this.state = {
       category: '',
+      selectedEquipment: [], //active Equipment
       selectedMasks: [], //previously ActiveEquipmentMasks
       selectedFins: [],
       selectedTanks: [],
     }
     this.addFinToStore = this.addFinToStore.bind(this)
-    this.addMaskToStore = this.addMaskToStore.bind(this)
-    this.addTankToStore = this.addTankToStore.bind(this)
-    this.removeFinFromStore = this.removeFinFromStore.bind(this)
+    this.removeFromStore = this.removeFinFromStore.bind(this)
   }
 
-  removeFromState(equipmenttype, Id) {
-    let adjustedFins = [...this.state.selectedFins].filter(function (fin) {
-      return fin != finId;
+  removeFromStore(EId) {
+    let equipmentList = [...this.state.selectedEquipment].filter(function (equipment) {
+      return equipment != EId;
     })
   }
+  
 
-  addFinToStore(fin) {
-    let selectedFins = [...this.state.selectedFins]
-    //'...' makes state immutable
-    selectedFins.push(fin)
-    // addes new id to array
-    this.setState({ selectedFins: selectedFins })
-    //sets new array to state
-  }
-
-  addMaskToStore(mask) {
-    let selectedMasks = [...this.state.selectedMasks]
-    selectedMasks.push(mask)
-    this.setState({ selectedMasks: selectedMasks })
-  }
-
-  addTankToStore(tank) {
-    let selectedTanks = [...this.state.selectedTanks]
-    selectedTanks.push(tank)
-    this.setState({ selectedTanks: selectedTanks })
-  }
+  // addFinToStore(fin) {
+  //   let selectedFins = [...this.state.selectedFins]
+  //   //'...' makes state immutable
+  //   selectedFins.push(fin)
+  //   // addes new id to array
+  //   this.setState({ selectedFins: selectedFins })
+  //   //sets new array to state
+  // }
 
   render() {
     return (

@@ -7,7 +7,7 @@ import catalogue from '../../catalogue'
 const Fins = catalogue.Fins
 
 class FinList extends Component {
-  
+ 
   render() {
     return (
       <div className='column'>
