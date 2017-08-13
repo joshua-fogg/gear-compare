@@ -10,9 +10,8 @@ class Compare extends Component {
     this.state = {
       category: '',
       selectedEquipment: [], //active Equipment
-
     }
-    this.addFinToStore = this.addFinToStore.bind(this)
+    this.addToStore = this.addToStore.bind(this)
     this.removeFromStore = this.removeFromStore.bind(this)
   }
 
@@ -20,6 +19,12 @@ class Compare extends Component {
     let equipmentList = [...this.state.selectedEquipment].filter(function (equipment) {
       return equipment != EId;
     })
+  }
+  addToStore(EId){
+    let selectedEQ = [...this.state.selectedEquipment]
+    selectedEQ.push(EId)  // addes new id to array
+    this.setState({ selectedFins: selectedFins }) //sets new array to state
+    
   }
   
 
