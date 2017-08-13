@@ -18,8 +18,8 @@ class Compare extends Component {
   toggleToStore(EId) {
     let selectedEQ = [...this.state.selectedEquipment]
     if (selectedEQ.includes(EId)) {
-      // let selectedEQ = selectedEQ.filter(function(id){
-         return  // EId!==id
+     selectedEQ = selectedEQ.filter((id)=>{
+         return id != EId
       })
       return
     } else {
@@ -28,15 +28,7 @@ class Compare extends Component {
     this.setState({ selectedEquipment: selectedEQ })
   }
 
-  // removeFromStore(EId) {
-  //   let equipmentList = [...this.state.selectedEquipment].filter((equipment) => {
-  //     return equipment != EId;
-  //   })
-  //   this.setState({selectedEquipment: equipmentList})
-  // }
-
-
-  render() {
+    render() {
     return (
       <div className='compare'>
         {this.props.match.params.id === 'Masks' && <Masks
