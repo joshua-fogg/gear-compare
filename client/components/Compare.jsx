@@ -10,12 +10,10 @@ class Compare extends Component {
     this.state = {
       category: '',
       selectedEquipment: [], //active Equipment
-      selectedMasks: [], //previously ActiveEquipmentMasks
-      selectedFins: [],
-      selectedTanks: [],
+
     }
     this.addFinToStore = this.addFinToStore.bind(this)
-    this.removeFromStore = this.removeFinFromStore.bind(this)
+    this.removeFromStore = this.removeFromStore.bind(this)
   }
 
   removeFromStore(EId) {
