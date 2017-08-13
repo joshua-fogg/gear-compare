@@ -23,15 +23,14 @@ class Compare extends Component {
   addToStore(EId){
     let selectedEQ = [...this.state.selectedEquipment]
     selectedEQ.push(EId)  // addes new id to array
-    this.setState({ selectedFins: selectedFins }) //sets new array to state
-    
+    this.setState({ selectedEquipment: selectedEQ }) //sets new array to state 
   }
 
   render() {
     return (
       <div className='compare'>
         {this.props.match.params.id === 'Masks' && <Masks 
-                                                    equipEQ={this.addToStore} 
+                                                    equipEQ={this.state.addToStore} 
                                                     selectedEQ={this.state.selectedEquipment} 
                                                     removeEQ={this.state.removeFromStore}
                                                     />}
