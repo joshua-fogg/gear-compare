@@ -7,8 +7,7 @@ import catalogue from '../../catalogue'
 const Fins = catalogue.Fins
 
 class FinList extends Component {
- 
-  render() {
+  render () {
     return (
       <div className='column'>
         {Fins.map((fin) => {
@@ -21,7 +20,7 @@ class FinList extends Component {
                 </figure>
               </div>
               <div className="card-content">
-                    <p className="title is-4">{fin.brand}</p>
+                <p className="title is-4">{fin.brand}</p>
                 <div className="content">
                   <p>{fin.make}</p>
                   <p>{fin.model}</p>
