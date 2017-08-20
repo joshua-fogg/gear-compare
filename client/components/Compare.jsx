@@ -1,34 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Masks from './gear/Masks'
 import Fins from './gear/Fins'
 import Tanks from './gear/Tanks'
 
-class Compare extends Component {
-  constructor(props) {
+class Compare extends React.Component {
+  constructor (props) {
     super(props)
     this.state = {
       category: '',
-      selectedEquipment: [], //active Equipment
+      selectedEquipment: [] // active Equipment
     }
     this.addToStore = this.toggleToStore.bind(this)
-    // this.removeFromStore = this.removeFromStore.bind(this)
+    this.removeFromStore = this.removeFromStore.bind(this)
   }
 
-  toggleToStore(EId) {
+  toggleToStore (EId) {
     let selectedEQ = [...this.state.selectedEquipment]
     if (selectedEQ.includes(EId)) {
-     selectedEQ = selectedEQ.filter((id)=>{
-         return id != EId
-      })
-      return
+      return (EId === id)
     } else {
       selectedEQ.push(EId)
     }
     this.setState({ selectedEquipment: selectedEQ })
   }
 
-    render() {
+  removeFromStore (EId) {
+    let equipmentList = [...this.state.selectedEquipment].filter((equipment) => {
+      return equipment !== EId
+    })
+    this.setState({selectedEquipment: equipmentList})
+  }
+
+  render () {
     return (
       <div className='compare'>
         {this.props.match.params.id === 'Masks' && <Masks

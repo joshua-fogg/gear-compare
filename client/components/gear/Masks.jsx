@@ -12,7 +12,7 @@ class MaskList extends Component {
     return (
       <div className='masks'>
         {Masks.map((mask) => {
-          const isSelected = this.props.selectedMask.includes(mask.id)
+          const isSelected = this.props.selected.includes(mask.id)
           return (
             < div className={classNames('category-items', { active: isSelected })} key={mask.id} onClick={(e) => {this.props.equipMask(mask.id)}}>
               <div className="category card">
