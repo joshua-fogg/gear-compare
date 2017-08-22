@@ -13,7 +13,6 @@ server.listen(PORT, function() {
     console.log('Listening on port', PORT)
 })
 
-
 server.get('/finData', (req, res) => {
     db('fins')
         .then((fins) => {
