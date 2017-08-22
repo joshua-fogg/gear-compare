@@ -18,7 +18,7 @@ class App extends React.Component {
     }
   }
   // state call functions go here
-
+  // will nedd componentDidMount for API call
   render() {
     return (
       <Router>
