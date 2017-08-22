@@ -1,4 +1,4 @@
-{
+const data = {
   "Fins": [
     { "id": "f1", "brand": "Apollo", "model": "Pro", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" },
     { "id": "f2", "brand": "Apollo", "model": "Ranger", "make": "Bio Fin", "heel_type": "Spring Strap", "fin_type": "Split Fin", "class": null, "colours": "Black" },
