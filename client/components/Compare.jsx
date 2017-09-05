@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Masks from './gear/Masks'
 import Fins from './gear/Fins'
