@@ -51,8 +51,8 @@ class Compare extends React.Component {
           unequip={this.removeFromStore}
         />}
         <div>
-          <br />
-          <br />
+          <Link to='/compare/Masks'> Masks </Link>
+          <Link to='/compare/Fins'> Fins </Link>
         </div>
       </div >
     )
@@ -64,7 +64,6 @@ export default Compare
 //add ins: have buttons on bottom of page for equipment categories?
 //change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
 //turn each state changer into a toggler function
-
 
   // addFinToStore(fin) {
   //   let selectedFins = [...this.state.selectedFins]
