@@ -19,7 +19,7 @@ class Compare extends React.Component {
   toggleToStore (EId) {
     let selectedEQ = [...this.state.selectedEquipment]
     if (selectedEQ.includes(EId)) {
-      return (EId === id)
+      return true
     } else {
       selectedEQ.push(EId)
     }
