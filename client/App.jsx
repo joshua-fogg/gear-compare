@@ -14,11 +14,8 @@ class App extends React.Component {
     this.state = {
       fillerState: 0,
       categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' }, { id: 3, name: 'Tanks', summary: 'Take a closer look at dive tanks', picture: '' }]
-      // define state here
     }
   }
-  // state call functions go here
-
   render () {
     return (
       <Router>
