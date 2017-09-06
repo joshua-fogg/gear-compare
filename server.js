@@ -6,22 +6,26 @@ var config = require('./knexfile').development
 var db = require('knex')(config)
 
 var PORT = process.env.PORT || 3000
-server.use(express.static(path.join(__dirname, 'public')));
+server.use(express.static(path.join(__dirname, 'public')))
 
 server.listen(PORT, function () {
   console.log('Listening on port', PORT)
 })
 
-server.get('/finData', (req, res) => {
-  db('fins')
-    .then((fins) => {
-      res.json(fins)
+// ----------------  API ROUTES   ------------------------------------
+
+// get category data. It's dope yo!
+server.get('/data/:topic', (req, res) => {
+  const topic = req.params.topic
+  db(`${topic}`)
+    .then((topicItems) => {
+      res.json(topicItems)
     })
 })
 
-server.get('/maskData', (req, res) => {
-  db('masks')
-    .then((fins) => {
-      res.json(fins)
-    })
+server.get('/data/categories', (req, res) => {
+  // db call to get categories.
+  db('categories').then((categoriesData) => {
+    res.send(categoriesData)
+  })
 })

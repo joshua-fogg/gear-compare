@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+//import {connect} from 'react-redux'
 const categories = (props) => {
   return (
     <div className='categories'>
@@ -41,3 +41,10 @@ const categories = (props) => {
 }
 
 export default categories
+//  function mapStateToProps(state) {
+// return {
+//   PropName: partOfStateHere
+// }  
+// }
+
+//export default connect(mapStateToProps)(categories)
