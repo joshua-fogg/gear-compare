@@ -12,7 +12,7 @@ class TankList extends Component {
     return (
       <div className='masks'>
         {Tanks.map((tank) => {
-          const isSelected = this.props.selectedTanks.includes(tank.id)
+          const isSelected = this.props.selected.includes(tank.id)
           return (
             <div className={classNames('category-items', { active: isSelected })} key={tank.id}>
               <div className='category card'>
