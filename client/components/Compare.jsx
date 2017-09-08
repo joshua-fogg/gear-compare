@@ -20,8 +20,6 @@ class Compare extends Component {
     if (selectedEQ.includes(EId)) {
       // let selectedEQ = selectedEQ.filter(function(id){
          return  // EId!==id
-      })
-      return
     } else {
       selectedEQ.push(EId)
     }
