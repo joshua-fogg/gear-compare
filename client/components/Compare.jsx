@@ -12,26 +12,24 @@ class Compare extends React.Component {
       category: '',
       selectedEquipment: [] // active Equipment
     }
-    this.addToStore = this.toggleToStore.bind(this)
-    this.removeFromStore = this.removeFromStore.bind(this)
+    this.toggleToStore = this.toggleToStore.bind(this)
+    // this.removeFromStore = this.removeFromStore.bind(this)
   }
 
   toggleToStore (EId) {
-    let selectedEQ = [...this.state.selectedEquipment]
-    if (selectedEQ.includes(EId)) {
-      // let selectedEQ = selectedEQ.filter(function(id){
-      // return EId!==id
+    const { selectedEquipment } = this.state
+    if (selectedEquipment.includes(EId)) {
+      this.setState({
+        selectedEquipment: selectedEquipment.filter(id => id !== EId)
+      })
     } else {
-      selectedEQ.push(EId)
+      this.setState({
+        selectedEquipment: [
+          ...selectedEquipment,
+          EId
+        ]
+      })
     }
-    this.setState({ selectedEquipment: selectedEQ })
-  }
-
-  removeFromStore (EId) {
-    let equipmentList = [...this.state.selectedEquipment].filter((equipment) => {
-      return equipment !== EId
-    })
-    this.setState({selectedEquipment: equipmentList})
   }
 
   render () {
@@ -39,17 +37,16 @@ class Compare extends React.Component {
     return (
       <div className='compare'>
         {category === 'Masks' && <Masks
-          equip={this.addToStore}
+          toggle={this.toggleToStore}
           selected={this.state.selectedEquipment}
           unequip={this.removeFromStore}
         />}
         {category === 'Fins' && <Fins
-          equip={this.addToStore}
+          toggle={this.toggleToStore}
           selected={this.state.selectedEquipment}
-          unequip={this.removeFromStore}
         />}
         {category === 'Tanks' && <Tanks
-          equip={this.addToStore}
+          toggle={this.toggleToStore}
           selected={this.state.selectedEquipment}
           unequip={this.removeFromStore}
         />}
@@ -67,12 +64,3 @@ export default Compare
 // add ins: have buttons on bottom of page for equipment categories?
 // change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
 // turn each state changer into a toggler function
-
-// addFinToStore(fin) {
-//   let selectedFins = [...this.state.selectedFins]
-//   //'...' makes state immutable
-//   selectedFins.push(fin)
-//   // addes new id to array
-//   this.setState({ selectedFins: selectedFins })
-//   //sets new array to state
-// }
