@@ -19,12 +19,8 @@ class Compare extends React.Component {
   toggleToStore (EId) {
     let selectedEQ = [...this.state.selectedEquipment]
     if (selectedEQ.includes(EId)) {
-<<<<<<< HEAD
-      return true
-=======
       // let selectedEQ = selectedEQ.filter(function(id){
-         return  // EId!==id
->>>>>>> 9d3400a9fb618a1acec0faee9148e47855326c1c
+      // return EId!==id
     } else {
       selectedEQ.push(EId)
     }
@@ -38,12 +34,8 @@ class Compare extends React.Component {
     this.setState({selectedEquipment: equipmentList})
   }
 
-<<<<<<< HEAD
   render () {
-=======
-  render() {
     const category = this.props.match.params.id
->>>>>>> 9d3400a9fb618a1acec0faee9148e47855326c1c
     return (
       <div className='compare'>
         {category === 'Masks' && <Masks
@@ -72,15 +64,15 @@ class Compare extends React.Component {
 
 export default Compare
 
-//add ins: have buttons on bottom of page for equipment categories?
-//change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
-//turn each state changer into a toggler function
+// add ins: have buttons on bottom of page for equipment categories?
+// change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
+// turn each state changer into a toggler function
 
-  // addFinToStore(fin) {
-  //   let selectedFins = [...this.state.selectedFins]
-  //   //'...' makes state immutable
-  //   selectedFins.push(fin)
-  //   // addes new id to array
-  //   this.setState({ selectedFins: selectedFins })
-  //   //sets new array to state
-  // }
+// addFinToStore(fin) {
+//   let selectedFins = [...this.state.selectedFins]
+//   //'...' makes state immutable
+//   selectedFins.push(fin)
+//   // addes new id to array
+//   this.setState({ selectedFins: selectedFins })
+//   //sets new array to state
+// }
