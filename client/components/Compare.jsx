@@ -19,7 +19,7 @@ class Compare extends Component {
     let selectedEQ = [...this.state.selectedEquipment]
     if (selectedEQ.includes(EId)) {
       // let selectedEQ = selectedEQ.filter(function(id){
-         return  // EId!==id
+      // return EId!==id
     } else {
       selectedEQ.push(EId)
     }
