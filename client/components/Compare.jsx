@@ -19,7 +19,12 @@ class Compare extends React.Component {
   toggleToStore (EId) {
     let selectedEQ = [...this.state.selectedEquipment]
     if (selectedEQ.includes(EId)) {
+<<<<<<< HEAD
       return true
+=======
+      // let selectedEQ = selectedEQ.filter(function(id){
+         return  // EId!==id
+>>>>>>> 9d3400a9fb618a1acec0faee9148e47855326c1c
     } else {
       selectedEQ.push(EId)
     }
@@ -33,20 +38,25 @@ class Compare extends React.Component {
     this.setState({selectedEquipment: equipmentList})
   }
 
+<<<<<<< HEAD
   render () {
+=======
+  render() {
+    const category = this.props.match.params.id
+>>>>>>> 9d3400a9fb618a1acec0faee9148e47855326c1c
     return (
       <div className='compare'>
-        {this.props.match.params.id === 'Masks' && <Masks
+        {category === 'Masks' && <Masks
           equip={this.addToStore}
           selected={this.state.selectedEquipment}
           unequip={this.removeFromStore}
         />}
-        {this.props.match.params.id === 'Fins' && <Fins
+        {category === 'Fins' && <Fins
           equip={this.addToStore}
           selected={this.state.selectedEquipment}
           unequip={this.removeFromStore}
         />}
-        {this.props.match.params.id === 'Tanks' && <Tanks
+        {category === 'Tanks' && <Tanks
           equip={this.addToStore}
           selected={this.state.selectedEquipment}
           unequip={this.removeFromStore}
