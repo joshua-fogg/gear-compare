@@ -16,15 +16,27 @@ class Compare extends Component {
   }
 
   toggleToStore(EId) {
-    let selectedEQ = [...this.state.selectedEquipment]
-    if (selectedEQ.includes(EId)) {
-      let selectedEQ = selectedEQ.filter(function(id){
-       EId!==id
+    const { selectedEquipment } = this.state
+    if (selectedEquipment.includes(EId)) {
+      this.setState({
+        selectedEquipment: selectedEquipment.filter(id => id !== EId)
       })
     } else {
-      selectedEQ.push(EId)
+      this.setState({
+        selectedEquipment: [
+          ...selectedEquipment,
+          EId
+        ]
+      })
     }
-    this.setState({ selectedEquipment: selectedEQ })
+    // let selectedEQ = [...this.state.selectedEquipment]
+    // console.log('EID:', EId, 'selectedEQ:', selectedEQ)
+    // if (selectedEQ.includes(EId)) {
+    //   let selectedEQ = selectedEQ.filter(id => EId !== id)
+    // } else {
+    //   selectedEQ.push(EId)
+    // }
+    // this.setState({ selectedEquipment: selectedEQ })
   }
 
   // removeFromStore(EId) {
