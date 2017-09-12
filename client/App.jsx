@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, HashRouter as Router } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import { render, ReactDOM } from 'react-dom'
 
 import Header from './components/Header'
@@ -18,21 +18,19 @@ class App extends React.Component {
   }
   render () {
     return (
-      <Router>
-        <div className='container'>
-          <div className='sub-container'>
-            <Header />
-            <Route exact path='/' component={Home} />
-            <Route path='/categories' render={() => (
-              <Categories categories={this.state.categories} />
-            )} />
-            <Route path='/compare/:id' render={(props) => (
-              <Compare {...props}/>
-            )} />
-            <Footer />
-          </div>
+      <div className='container'>
+        <div className='sub-container'>
+          <Header />
+          <Route exact path='/' component={Home} />
+          <Route path='/categories' render={() => (
+            <Categories categories={this.state.categories} />
+          )} />
+          <Route path='/compare/:id' render={(props) => (
+            <Compare {...props}/>
+          )} />
+          <Footer />
         </div>
-      </Router>
+      </div>
     )
   }
 }
