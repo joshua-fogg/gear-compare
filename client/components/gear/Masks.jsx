@@ -7,18 +7,13 @@ import catalogue from '../../catalogue'
 const Masks = catalogue.Masks
 
 class MaskList extends Component {
-
-  render(props) {
+  render (props) {
     return (
       <div className='masks'>
         {Masks.map((mask) => {
           const isSelected = this.props.selected.includes(mask.id)
           return (
-<<<<<<< HEAD
-            < div className={classNames('category-items', { active: isSelected })} key={mask.id} onClick={(e) => {this.props.toggle(mask.id)}}>
-=======
             < div className={classNames('category-items', { active: isSelected })} key={mask.id} onClick={(e) => { this.props.toggle(mask.id) }}>
->>>>>>> 86bd0dc4824da62219b3f9494eff91437e1f49a2
               <div className="category card">
                 <div className="card-image">
                   <figure className="image is-4by3">
@@ -49,6 +44,5 @@ class MaskList extends Component {
     )
   }
 }
-
 
 export default MaskList
