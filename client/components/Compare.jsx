@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Masks from './gear/Masks'
 import Fins from './gear/Fins'
 import Tanks from './gear/Tanks'
 
-class Compare extends Component {
-  constructor(props) {
+class Compare extends React.Component {
+  constructor (props) {
     super(props)
     this.state = {
       category: '',
-      selectedEquipment: [], //active Equipment
+      selectedEquipment: [] // active Equipment
     }
     this.toggleToStore = this.toggleToStore.bind(this)
     // this.removeFromStore = this.removeFromStore.bind(this)
   }
 
-  toggleToStore(EId) {
+  toggleToStore (EId) {
     const { selectedEquipment } = this.state
     if (selectedEquipment.includes(EId)) {
       this.setState({
@@ -31,7 +32,7 @@ class Compare extends Component {
     }
   }
 
-  render() {
+  render () {
     const category = this.props.match.params.id
     return (
       <div className='compare'>
@@ -50,8 +51,8 @@ class Compare extends Component {
           unequip={this.removeFromStore}
         />}
         <div>
-          <br />
-          <br />
+          <Link to='/compare/Masks'> Masks </Link>
+          <Link to='/compare/Fins'> Fins </Link>
         </div>
       </div >
     )
@@ -60,6 +61,6 @@ class Compare extends Component {
 
 export default Compare
 
-//add ins: have buttons on bottom of page for equipment categories?
-//change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
-//turn each state changer into a toggler function
+// add ins: have buttons on bottom of page for equipment categories?
+// change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
+// turn each state changer into a toggler function

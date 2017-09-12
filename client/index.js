@@ -1,11 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { ReactDOM } from 'react'
+import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
 import App from './App'
 
 document.addEventListener('DOMContentLoaded', () => {
-    ReactDOM.render( <
-        App / > ,
-        document.getElementById('root')
-    )
+  render(
+    <BrowserRouter >
+      <App />
+    </BrowserRouter>
+    ,
+    document.getElementById('app')
+  )
 })

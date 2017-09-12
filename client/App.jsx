@@ -9,17 +9,14 @@ import Compare from './components/Compare'
 import Footer from './components/Footer'
 
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       fillerState: 0,
-      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' },{ id: 3, name: 'Tanks', summary: 'Take a closer look at dive tanks', picture: '' }]
-      // define state here
+      categories: [{ id: 1, name: 'Masks', summary: 'Take a closer look at diving masks', picture: '' }, { id: 2, name: 'Fins', summary: 'Take a closer look at diving masks', picture: '' }, { id: 3, name: 'Tanks', summary: 'Take a closer look at dive tanks', picture: '' }]
     }
   }
-  // state call functions go here
-
-  render() {
+  render () {
     return (
       <Router>
         <div className='container'>
