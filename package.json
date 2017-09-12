@@ -6,9 +6,10 @@
   "url": "https://github.com/joshua-fogg/gear-compare.git",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server & webpack --watch",
+    "start": "nodemon server && webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "knex": "knex"
+    "knex": "knex",
+    "webpack": "webpack --watch"
   },
   "babel": {
     "presets": [
@@ -26,8 +27,8 @@
     "knex": "^0.13.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
-    "react-router-dom": "^4.1.2",
-    "sqlite3": "^3.1.8"
+    "react-router-dom": "^4.2.2",
+    "sqlite3": "^3.1.10"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
