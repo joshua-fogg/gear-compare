@@ -9,7 +9,7 @@ const Fins = catalogue.Fins
 class FinList extends Component {
   render () {
     return (
-      <div className='column'>
+      <div className ='column'>
         {Fins.map((fin) => {
           const isSelected = this.props.selected.includes(fin.id)
           return (
