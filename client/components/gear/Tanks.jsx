@@ -7,10 +7,9 @@ import catalogue from '../../catalogue'
 const Tanks = catalogue.Tanks
 
 class TankList extends Component {
-
-  render() {
+  render () {
     return (
-      <div className='masks'>
+      <div className='column'>
         {Tanks.map((tank) => {
           const isSelected = this.props.selected.includes(tank.id)
           return (
@@ -41,6 +40,5 @@ class TankList extends Component {
     )
   }
 }
-
 
 export default TankList
