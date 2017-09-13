@@ -62,6 +62,5 @@ class Compare extends React.Component {
 
 export default Compare
 
-// add ins: have buttons on bottom of page for equipment categories?
-// change ID'd to be unique / class specific => condense state to be 1 state => can be loadout
+// change ID's to be unique / class specific => condense state to be 1 state => can be loadout
 // turn each state changer into a toggler function
