@@ -7,14 +7,14 @@ import App from '../../client/components/App'
 
 App.prototype.componentDidMount = () => {}
 
-test('Shows heading', t => {
+test('Shows Navigation Bar', t => {
   const wrapper = shallow(<App />)
-  t.is(wrapper.find('h1').text(), 'Widgets FTW!')
+  t.is(wrapper.find('navbar').text(), 'Gear-Compare')
 })
 
-test('Renders widget list', t => {
+test('Renders categories', t => {
   const wrapper = mount(<App />)
-  t.is(wrapper.find('.widget-list').exists(), true)
+  t.is(wrapper.find('.categories').exists(), true)
 })
 
 test('Renders add form when clicked', t => {
@@ -24,12 +24,14 @@ test('Renders add form when clicked', t => {
   t.is(wrapper.find('.add-widget').exists(), true)
 })
 
-test('Shows widget details', t=> {
-  const widgets = [{name: 'red', id: 1}, {name: 'blue', id: 2}]
-  const wrapper = mount(<App />)
-  wrapper.setState({widgets})
-  t.is(wrapper.find('.widget-details').exists(), false)
+//test tempalte for reminder
 
-  wrapper.instance().showDetails(widgets[0])
-  t.is(wrapper.find('.widget-details').exists(), true)
-})
+// test('Shows widget details', t=> {
+//   const widgets = [{name: 'red', id: 1}, {name: 'blue', id: 2}]
+//   const wrapper = mount(<App />)
+//   wrapper.setState({widgets})
+//   t.is(wrapper.find('.widget-details').exists(), false)
+
+//   wrapper.instance().showDetails(widgets[0])
+//   t.is(wrapper.find('.widget-details').exists(), true)
+// })
