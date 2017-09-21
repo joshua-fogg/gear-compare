@@ -11,7 +11,7 @@
     "knex": "knex",
     "run": "nodemon server"
   },
-  "keywords": ["gear", "compare", "enspiral"],
+  "keywords": ["gear", "compare", "enspiral", "academy"],
   "author": "EDA",
   "license": "ISC",
   "dependencies": {
