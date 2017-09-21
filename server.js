@@ -5,16 +5,15 @@ var path = require('path')
 var config = require('./knexfile').development
 var db = require('knex')(config)
 
-var PORT = process.env.PORT || 3000
+var port = process.env.PORT || 3000
 server.use(express.static(path.join(__dirname, 'public')))
 
-server.listen(PORT, function () {
-  console.log('Listening on port', PORT)
+server.listen(port, function () {
+  console.log('Listening on port', port)
 })
 
-// ----------------  API ROUTES   ------------------------------------
+// ----------------  API ROUTES   --------------- //
 
-// get category data. It's dope yo!
 server.get('/data/:topic', (req, res) => {
   const topic = req.params.topic
   db(`${topic}`)
