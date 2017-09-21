@@ -6,19 +6,12 @@
   "url": "https://github.com/joshua-fogg/gear-compare.git",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server & webpack --watch",
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "knex": "knex",
-    "webpack": "webpack --watch",
     "run": "nodemon server"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
-  },
-  "keywords": [],
+  "keywords": ["gear", "compare", "enspiral"],
   "author": "EDA",
   "license": "ISC",
   "dependencies": {
