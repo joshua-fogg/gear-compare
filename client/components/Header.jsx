@@ -9,6 +9,7 @@ const Header = () => {
         <div className='nav-links'><Link to='/' >Home</Link></div>
         <div className='nav-links'><Link to='/categories'>Gear Categories</Link></div>
         <div className='nav-links'><Link to='/compare' >Compare</Link></div>
+        <div className='nav-links'><a href='http://www.github.com/joshua-fogg' >Git Hub</a></div>
 
         {/* redirect button to github */}
       </div >
